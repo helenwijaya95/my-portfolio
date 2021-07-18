@@ -1,33 +1,28 @@
 <template>
-  <div class="container">
-    <div>
-      <Logo />
-      <h1 class="title">personal-portfolio</h1>
-      <div class="links">
-        <a
-          href="https://nuxtjs.org/"
-          target="_blank"
-          rel="noopener noreferrer"
-          class="button--green"
-        >
-          Documentation
-        </a>
-        <a
-          href="https://github.com/nuxt/nuxt.js"
-          target="_blank"
-          rel="noopener noreferrer"
-          class="button--grey"
-        >
-          GitHub
-        </a>
-      </div>
+  <div>
+    <div class="container">
+      <social-media />
+      <no-ssr>
+        <text-distortion />
+      </no-ssr>
+      <p>I'm a frontend developer</p>
+    </div>
+    <div class="container">
+      <h1>About me</h1>
+      <p>I write code to build user-friendly web pages.</p>
+      <p>The technology that I have been using are:</p>
+      <timeline />
+      <ul>
+        <li>javascript(ES6)</li>
+        <li>Vue.js</li>
+        <li>jQuery</li>
+      </ul>
     </div>
   </div>
 </template>
 
 <script lang="ts">
 import Vue from 'vue'
-
 export default Vue.extend({})
 </script>
 
@@ -39,6 +34,7 @@ export default Vue.extend({})
   justify-content: center;
   align-items: center;
   text-align: center;
+  flex-direction: column;
 }
 
 .title {
