@@ -1,4 +1,4 @@
-import Vue from "vue";
-import VueTimeline from "@growthbunker/vuetimeline";
+import Vue from 'vue'
+import VueTimeline from '@growthbunker/vuetimeline'
 
-Vue.use(VueTimeline);
+Vue.use(VueTimeline)

@@ -2,7 +2,7 @@
   <div>
     <div class="menu">
       <a href="#content-1" class="menu__item">
-        <span data-splitting class="menu__item-title">Hello, I'm Helen</span>
+        <span data-splitting class="menu__item-title">{{ text }}</span>
         <!-- <span data-splitting class="menu__item-sub">A Frontend Developer</span> -->
       </a>
     </div>
@@ -92,39 +92,47 @@
 </template>
 
 <script>
+import Splitting from 'splitting'
 import Cursor from '../classes/cursorClass.js'
 import MenuItem from '../classes/menuItemClass.js'
 import 'splitting/dist/splitting.css'
 import 'splitting/dist/splitting-cells.css'
-import Splitting from 'splitting'
 import '../assets/css/text-distortion.css'
 
 export default {
+  name: 'TextDistortion',
+  props: {
+    text: {
+      type: String,
+      required: true,
+    },
+  },
   mounted() {
     // Track the mouse position and update it on mouse move
 
     // initialize Splitting
-    const splitting = Splitting()
-    console.log(document)
+    Splitting()
 
     // initialize custom cursor
-    const cursor = new Cursor(document.querySelector('.cursor'))
+    if (document) {
+      const cursor = new Cursor(document.querySelector('.cursor'))
 
-    // Menu Items
-    ;[...document.querySelectorAll('.menu > a')].forEach(
-      (el) => new MenuItem(el)
-    )
+      // Menu Items
+      ;[...document.querySelectorAll('.menu > a')].forEach(
+        (el) => new MenuItem(el)
+      )
 
-    // mouse effects on all links
-    ;[...document.querySelectorAll('a')].forEach((link) => {
-      link.addEventListener('mouseenter', () => cursor.enter())
-      link.addEventListener('mouseleave', () => cursor.leave())
-    })
+      // mouse effects on all links
+      ;[...document.querySelectorAll('a')].forEach((link) => {
+        link.addEventListener('mouseenter', () => cursor.enter())
+        link.addEventListener('mouseleave', () => cursor.leave())
+      })
+    }
   },
 }
 </script>
 
-<style>
+<style scoped>
 .cursor {
   display: block;
 }

@@ -1,24 +1,32 @@
 <template>
-  <div>
-    <div class="container">
-      <social-media />
-      <no-ssr>
-        <text-distortion />
-      </no-ssr>
-      <p>I'm a frontend developer</p>
+  <client-only>
+    <div>
+      <!-- homepage -->
+      <div class="container">
+        <Menu />
+
+        <social-media />
+        <text-distortion text="Hello, I'm Helen" />
+        <p>I'm a frontend developer</p>
+      </div>
+
+      <!-- about me section -->
+      <div class="container">
+        <h1>About me</h1>
+        <p>I write code to build user-friendly web pages.</p>
+        <p>The technology that I have been using for my works are:</p>
+        <ul>
+          <li>javascript(ES6)</li>
+          <li>Vue.js</li>
+          <li>jQuery</li>
+        </ul>
+        <p>I have been exploring React.js lately.</p>
+      </div>
+
+      <!-- my journey section -->
+      <div class="container"></div>
     </div>
-    <div class="container">
-      <h1>About me</h1>
-      <p>I write code to build user-friendly web pages.</p>
-      <p>The technology that I have been using are:</p>
-      <timeline />
-      <ul>
-        <li>javascript(ES6)</li>
-        <li>Vue.js</li>
-        <li>jQuery</li>
-      </ul>
-    </div>
-  </div>
+  </client-only>
 </template>
 
 <script lang="ts">
