@@ -30,7 +30,7 @@ export default {
 }
 </script>
 
-<style scoped>
+<style lang="scss" scoped>
 .menu-btn {
   position: fixed;
   right: 0;
@@ -47,7 +47,7 @@ export default {
   z-index: 1;
   right: 0;
   top: 0;
-  background-color: rgb(208 57 57 / 98%);
+  background-color: $primary-red;
 }
 
 .menu {

@@ -14,7 +14,7 @@ export default {
   },
 
   // Global CSS: https://go.nuxtjs.dev/config-css
-  css: [],
+  css: ['~assets/scss/variable.scss'],
 
   // Plugins to run before rendering page: https://go.nuxtjs.dev/config-plugins
   plugins: [{ src: '@/plugins/vuetimeline.js' }],
@@ -38,6 +38,7 @@ export default {
     '@nuxtjs/pwa',
     // https://go.nuxtjs.dev/content
     '@nuxt/content',
+    '@nuxtjs/style-resources',
     'nuxt-fontawesome',
   ],
 
@@ -51,15 +52,15 @@ export default {
     imports: [
       {
         set: '@fortawesome/free-brands-svg-icons',
-        icons: ['faLinkedin'], // selectively import set to reduce size, use 'fas' to import entire set
+        icons: ['faLinkedin'],
       },
       {
         set: '@fortawesome/free-brands-svg-icons',
-        icons: ['faFacebook'], // selectively import set to reduce size, use 'fas' to import entire set
+        icons: ['faFacebook'],
       },
       {
         set: '@fortawesome/free-brands-svg-icons',
-        icons: ['faGithub'], // selectively import set to reduce size, use 'fas' to import entire set
+        icons: ['faGithub'],
       },
     ],
   },
@@ -68,6 +69,10 @@ export default {
       productionTip: false,
       devtools: true,
     },
+  },
+  // scss config
+  styleResources: {
+    scss: ['./assets/scss/*.scss'],
   },
   // Content module configuration: https://go.nuxtjs.dev/config-content
   content: {},
