@@ -1,23 +1,25 @@
 <template>
-  <div>
-<ul>
-    <li>
-        <a href="#">
-          <i class="fa fa-class-name"></i>
-
-        </a>
-    </li>
-</ul>
+  <div class="social-link">
+    <a href="#">
+      <font-awesome-icon :icon="['fab', 'linkedin']" />
+    </a>
+    <a href="#">
+      <font-awesome-icon :icon="['fab', 'facebook']" />
+    </a>
+    <a href="#">
+      <font-awesome-icon :icon="['fab', 'github']" />
+    </a>
   </div>
 </template>
 
 <script>
- 
 export default {
-    name: 'SocialMedia'
+  name: 'SocialMedia',
 }
 </script>
 
-<style>
-
+<style scoped>
+.social-link a {
+  font-size: 3.2rem;
+}
 </style>
