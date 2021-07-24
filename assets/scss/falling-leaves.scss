@@ -1,0 +1,12 @@
+#falling-leaves {
+  position: relative;
+  z-index: 2;
+
+  & > .dot {
+    width: 35px;
+    height: 35px;
+    position: absolute;
+    background: url(../../static/img/leaf.png);
+    background-size: 100% 100%;
+  }
+}

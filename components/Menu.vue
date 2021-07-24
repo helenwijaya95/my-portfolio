@@ -1,8 +1,10 @@
 <template>
   <header>
+    <cross-cursor />
+
     <a class="menu-btn" @click.prevent="toggleMenu">Menu</a>
     <transition name="fade" mode="out-in">
-      <div v-if="show" class="menu-wrapper">
+      <div v-show="isShow" class="menu-wrapper">
         <ul class="menu">
           <li><a href="#">Home</a></li>
           <li><a href="#">About Me</a></li>
@@ -19,12 +21,13 @@ export default {
   name: 'Menu',
   data() {
     return {
-      show: false,
+      isShow: false,
     }
   },
+
   methods: {
     toggleMenu() {
-      this.show = !this.show
+      this.isShow = !this.isShow
     },
   },
 }
@@ -38,6 +41,7 @@ export default {
   padding: 20px;
   z-index: 2;
   color: black;
+  cursor: pointer;
 }
 
 .menu-wrapper {
@@ -52,11 +56,11 @@ export default {
 
 .menu {
   list-style: none;
-  font-size: 5.2rem;
+  font-size: 3.2rem;
   position: relative;
   top: 50%;
   transform: translateY(-50%);
-  line-height: 8rem;
+  line-height: 5rem;
 }
 
 .menu li a {
