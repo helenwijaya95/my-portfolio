@@ -1,7 +1,9 @@
 <template>
   <client-only>
     <div>
+      <!-- <img src="~/static/img/marble.jpg" /> -->
       <!-- homepage -->
+      <falling-leaves />
       <div class="container">
         <Menu />
 
@@ -31,10 +33,14 @@
 
 <script lang="ts">
 import Vue from 'vue'
+
 export default Vue.extend({})
 </script>
 
 <style>
+body {
+  overflow-x: hidden;
+}
 .container {
   margin: 0 auto;
   min-height: 100vh;

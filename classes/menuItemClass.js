@@ -15,14 +15,18 @@ export default class MenuItem {
   }
 
   initEvents() {
-    this.onMouseEnterEv = () => this.onMouseEnter()
+    setInterval(() => {
+      this.onMouseEnter()
+    }, 3000)
+
+    this.onMouseEnterEv = () => this.onMouseEnter(true)
     this.DOM.el.addEventListener('mouseenter', this.onMouseEnterEv)
 
     this.onMouseLeaveEv = () => this.onMouseLeave()
     this.DOM.el.addEventListener('mouseleave', this.onMouseLeaveEv)
   }
 
-  onMouseEnter() {
+  onMouseEnter(hover = false) {
     if (this.leaveTimeline) {
       this.leaveTimeline.kill()
     }
@@ -35,8 +39,8 @@ export default class MenuItem {
         defaults: {
           duration: 0.07,
           ease: 'power3',
-          x: () => gsap.utils.random(-10, 10),
-          y: () => gsap.utils.random(-20, 20),
+          x: () => gsap.utils.random(-5, 5),
+          y: () => gsap.utils.random(-10, 10),
           rotation: () => gsap.utils.random(-5, 5),
           color: () =>
             gsap.utils.random(0, 3) < 0.5
@@ -60,7 +64,7 @@ export default class MenuItem {
           x: 0,
           y: 0,
           rotation: 0,
-          color: this.colors.final,
+          color: hover ? this.colors.final : this.colors.initial,
         },
         '+=0.05'
       )
