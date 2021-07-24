@@ -9,7 +9,7 @@
 
         <social-media />
         <text-distortion text="Hello, I'm Helen" />
-        <p>I'm a frontend developer</p>
+        <p class="underline">I'm a frontend developer</p>
       </div>
 
       <!-- about me section -->

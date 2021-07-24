@@ -32,68 +32,41 @@ export default {
     // initialize Splitting
     Splitting()
 
-    // initialize custom cursor
     if (document) {
-      // const cursor = new Cursor(document.querySelector('.cursor'))
-
       // Menu Items
       ;[...document.querySelectorAll('.menu > a')].forEach(
         (el) => new MenuItem(el)
       )
 
-      // // mouse effects on all links
-      // ;[...document.querySelectorAll('a')].forEach((link) => {
-      //   link.addEventListener('mouseenter', () => cursor.enter())
-      //   link.addEventListener('mouseleave', () => cursor.leave())
-      // })
+      this.addElementForChar()
     }
+  },
+
+  methods: {
+    addElementForChar() {
+      const elNum = document.querySelectorAll('.menu__item .word .char').length
+      const el1 = document.querySelectorAll('.menu__item .word .char')[1]
+
+      const el2 = document.querySelectorAll('.menu__item .word .char')[
+        elNum - 1
+      ]
+
+      const tag = document.createElement('div')
+      tag.classList.add('leaf-bg', 'left')
+      el1.appendChild(tag)
+
+      const tag2 = document.createElement('div')
+      tag2.classList.add('leaf-bg', 'right')
+      el2.appendChild(tag2)
+
+      // ;[...document.querySelectorAll('.menu__item .word .char')].forEach(
+      //   (el) => {
+      //     const tag = document.createElement('div')
+      //     tag.classList.add('leaf-bg')
+      //     el.appendChild(tag)
+      //   }
+      // )
+    },
   },
 }
 </script>
-
-<style scoped>
-.cursor {
-  display: block;
-}
-
-@media (any-pointer: fine) {
-  .cursor {
-    position: fixed;
-    top: 0;
-    left: 0;
-    display: block;
-    pointer-events: none;
-    z-index: 1001;
-  }
-
-  .no-js .cursor {
-    display: none;
-  }
-
-  .cursor__line {
-    position: fixed;
-    display: block;
-    will-change: transform, opacity;
-  }
-
-  .cursor__line--horizontal {
-    top: -10px;
-    left: -10%;
-    width: 120%;
-    height: 20px;
-  }
-
-  .cursor__line--vertical {
-    left: -10px;
-    top: -10%;
-    height: 120%;
-    width: 20px;
-  }
-
-  .cursor__line-element {
-    fill: none;
-    stroke: var(--cursor-stroke);
-    stroke-width: var(--cursor-stroke-width);
-  }
-}
-</style>
