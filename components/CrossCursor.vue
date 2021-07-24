@@ -105,3 +105,50 @@ export default {
   },
 }
 </script>
+
+<style scoped>
+.cursor {
+  display: block;
+}
+
+@media (any-pointer: fine) {
+  .cursor {
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: block;
+    pointer-events: none;
+    z-index: 1001;
+  }
+
+  .no-js .cursor {
+    display: none;
+  }
+
+  .cursor__line {
+    position: fixed;
+    display: block;
+    will-change: transform, opacity;
+  }
+
+  .cursor__line--horizontal {
+    top: -10px;
+    left: -10%;
+    width: 120%;
+    height: 20px;
+  }
+
+  .cursor__line--vertical {
+    left: -10px;
+    top: -10%;
+    height: 120%;
+    width: 20px;
+  }
+
+  .cursor__line-element {
+    fill: none;
+    stroke: var(--cursor-stroke);
+    stroke-width: var(--cursor-stroke-width);
+  }
+}
+</style>
