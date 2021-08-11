@@ -1,0 +1,71 @@
+@mixin styled-underline {
+  &::after {
+    content: '';
+    width: 105px;
+    height: 2px;
+    border-top-left-radius: 50%;
+    border-bottom-left-radius: 50%;
+    background: $primary-red;
+    position: absolute;
+    left: 0;
+    bottom: -5px;
+    transition: width 0.3s ease-in-out;
+  }
+
+  // leaf icon
+  &::before {
+    content: '';
+    width: 25px;
+    height: 25px;
+    position: absolute;
+    left: -25px;
+    bottom: -7px;
+    background: url(~/static/img/leaf.png);
+    background-size: 100% 100%;
+    width: 30px;
+    animation: MoveRotate15 1.2s linear infinite;
+    opacity: 1;
+    transition: bottom 0.1s ease-in;
+    transform: rotate(-180);
+  }
+}
+
+@mixin styled-underline-on-hover {
+  &::after {
+    content: '';
+    width: 0;
+    height: 2px;
+    border-top-left-radius: 50%;
+    border-bottom-left-radius: 50%;
+    background: $primary-red;
+    position: absolute;
+    left: 0;
+    bottom: -5px;
+    transition: width 0.3s ease-in-out;
+  }
+
+  // leaf icon
+  &::before {
+    content: '';
+    width: 25px;
+    height: 25px;
+    position: absolute;
+    left: -25px;
+    bottom: -7px;
+    background: url(~/static/img/leaf.png);
+    background-size: 100% 100%;
+    width: 30px;
+    animation: MoveRotate15 1.2s linear infinite;
+    transition: bottom 0.1s ease-in;
+    transform: rotate(-180);
+  }
+
+  &:hover {
+    &::after {
+      width: 105%;
+    }
+    &::before {
+      bottom: -10px;
+    }
+  }
+}

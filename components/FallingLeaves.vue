@@ -22,7 +22,7 @@ export default {
     TweenLite.set('#falling-leaves', { perspective: 600 })
     TweenLite.set('img', { xPercent: '-50%', yPercent: '-50%' })
 
-    const total = 15
+    const total = 10
     const warp = document.getElementById('falling-leaves')
     let i
     for (i = 0; i < total; i++) {

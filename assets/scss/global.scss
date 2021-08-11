@@ -1,11 +1,22 @@
+@import 'mixin.scss';
 // variable
 $primary-red: #d03939;
+$primary-grey: #f0f0f0;
 
 // global styles
 .underline {
   text-decoration: underline;
 }
 
+.action-link {
+  position: relative;
+  text-decoration: none;
+
+  // styled underline
+  @include styled-underline-on-hover;
+}
+
+// leaf animation
 .menu__item-title .word .char {
   .leaf-bg {
     background: url(~/static/img/leaf.png);
@@ -14,7 +25,7 @@ $primary-red: #d03939;
     height: 30px;
 
     position: absolute;
-    animation: MoveRotate45 1.2s linear infinite;
+    animation: MoveRotate15 1.2s linear infinite;
 
     &.right {
       bottom: -5px;
@@ -34,13 +45,13 @@ $primary-red: #d03939;
 
 //keyframes
 
-@keyframes MoveRotate45 {
+@keyframes MoveRotate15 {
   0%,
   100% {
-    transform: rotate(45deg) skew(2deg, 2deg);
+    transform: skew(2deg, 2deg);
   }
   50% {
-    transform: rotate(30deg) skew(10deg, 10deg);
+    transform: rotate(15deg) skew(3deg, 3deg);
   }
 }
 @keyframes MoveRotate2 {
