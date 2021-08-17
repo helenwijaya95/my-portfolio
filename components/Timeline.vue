@@ -2,10 +2,11 @@
   <div>
     <cross-cursor />
     <client-only>
-      <falling-leaves />
+      <!-- <falling-leaves /> -->
+      <cross-cursor />
     </client-only>
 
-    <TimelineBox :experiences="experiences" />
+    <TimelineItem :experiences="experiences" />
   </div>
 </template>
 
@@ -19,6 +20,7 @@ export default {
           position: 'Frontend Developer Associate Team Leader',
           company: 'Xtremax',
           companySite: 'https://www.xtremax.com/',
+          startYear: '2019',
           jobdesc: [
             'Managed & led a team of 4',
             'Code review',
@@ -26,9 +28,10 @@ export default {
           ],
         },
         {
-          position: 'Frontend Developer Associate Team Leader',
+          position: 'Frontend Developer Associate Team Leader2',
           company: 'Xtremax',
           companySite: 'https://www.xtremax.com/',
+          startYear: '2019',
           jobdesc: [
             'Managed & led a team of 4',
             'Code review',
@@ -36,9 +39,21 @@ export default {
           ],
         },
         {
-          position: 'Frontend Developer Associate Team Leader',
+          position: 'Frontend Developer Associate Team Leader3',
           company: 'Xtremax',
           companySite: 'https://www.xtremax.com/',
+          startYear: '2019',
+          jobdesc: [
+            'Managed & led a team of 4',
+            'Code review',
+            'Unit testing using Jest & Vue Test Utils',
+          ],
+        },
+        {
+          position: 'Frontend Developer Associate Team Leader4',
+          company: 'Xtremax',
+          companySite: 'https://www.xtremax.com/',
+          startYear: '2019',
           jobdesc: [
             'Managed & led a team of 4',
             'Code review',
