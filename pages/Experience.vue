@@ -1,7 +1,12 @@
 <template>
   <!-- about me section -->
   <div class="inner-container">
-    <h1>Experience</h1>
+    <cross-cursor />
+    <client-only>
+      <falling-leaves />
+      <!-- <cross-cursor /> -->
+      <TextDistortion text="Experience" :is-small="true" />
+    </client-only>
     <Timeline />
   </div>
 </template>

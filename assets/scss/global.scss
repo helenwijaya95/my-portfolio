@@ -2,12 +2,16 @@
 $primary-red: #d03939;
 $primary-grey: #f0f0f0;
 // Typography
-$base-font: helvetica, arial, tahoma, verdana;
+$base-font: 'Dosis', helvetica, arial, tahoma, verdana;
 $base-font-title: 'Press Start 2P', arial, tahoma, verdana;
 
 $base-font-color: black;
+$color-link-hover: black;
+$cursor-stroke-width: 1px;
+$cursor-stroke: black;
 @import 'mixin.scss';
 @import 'timeline.scss';
+@import 'text-distortion.scss';
 
 // global styles
 
@@ -35,7 +39,16 @@ body {
 section {
   margin-top: 25px;
 }
+h1,
+h2,
+h3,
+h4 {
+  font: {
+    family: $base-font;
+  }
+}
 p {
+  font-family: $base-font;
   margin-bottom: 15px;
 }
 
@@ -43,6 +56,10 @@ p {
   overflow-y: hidden;
 }
 
+.page-title {
+  font-family: $base-font-title;
+  font-size: 25px;
+}
 .inner-container {
   padding: 25px;
   min-height: 100vh;
@@ -99,7 +116,7 @@ ul {
 }
 
 // leaf animation
-.menu__item-title .word .char {
+.distortion-text {
   .leaf-bg {
     background: url(~/static/img/leaf.png);
     background-size: 100% 100%;
@@ -107,26 +124,50 @@ ul {
     height: 30px;
 
     position: absolute;
-    animation: MoveRotate15 1.2s linear infinite;
+    animation: MoveRotate1 1.2s linear infinite;
 
     &.right {
       bottom: -5px;
       right: -16px;
     }
+
+    &.center {
+      bottom: -5px;
+      right: -18px;
+      width: 24px;
+      height: 24px;
+      transform: rotate(-75deg);
+      animation: MoveRotate3 0.7s linear infinite;
+    }
     &.left {
-      top: -10px;
+      top: -33px;
       left: -3px;
       transform: rotate(-68deg);
       background-size: 100% 100%;
       animation: MoveRotate2 1s linear infinite;
-      width: 30px;
-      height: 30px;
+    }
+  }
+  &.is-small {
+    .leaf-bg {
+      width: 22px;
+      height: 22px;
+      &.right {
+        bottom: -16px;
+      }
+      &.center {
+        width: 20px;
+        height: 20px;
+        bottom: -6px;
+      }
+      &.left {
+        top: -23px;
+      }
     }
   }
 }
 
 //keyframes
-@keyframes MoveRotate15 {
+@keyframes MoveRotate1 {
   0%,
   100% {
     transform: skew(2deg, 2deg);
@@ -142,5 +183,14 @@ ul {
   }
   50% {
     transform: rotate(-80deg);
+  }
+}
+@keyframes MoveRotate3 {
+  0%,
+  100% {
+    transform: rotate(-50deg);
+  }
+  50% {
+    transform: rotate(-35deg);
   }
 }

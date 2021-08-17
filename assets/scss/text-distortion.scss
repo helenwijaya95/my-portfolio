@@ -15,14 +15,10 @@ body {
   --color-link: #d03939;
   --color-link-hover: #000;
   --color-menu: #000;
-  color: var(--color-text);
-  background-color: var(--color-bg);
-  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Helvetica, Arial,
-    sans-serif;
+
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  font-family: highgate, sans-serif;
-  --cursor-stroke: #000;
+  --cursor-stroke: #525252;
   --cursor-stroke-width: 1px;
 }
 

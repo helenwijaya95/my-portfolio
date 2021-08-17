@@ -4,13 +4,6 @@ main style by https://github.com/itbruno/responsive-timeline
 modified by @helenwijaya95
 */
 
-// Variables
-$bg-body: #f9f9f9;
-
-$blue: #2b2e48;
-
-$secondary-color: $blue;
-
 // Timeline
 $timeline-color: $primary-red;
 
@@ -58,16 +51,6 @@ a {
   margin: 0 auto;
 }
 
-h1,
-h2,
-h3,
-h4 {
-  font: {
-    family: $base-font-title;
-    weight: 500;
-  }
-}
-
 // Timeline
 #timeline {
   width: 100%;
@@ -100,11 +83,11 @@ h4 {
 
     .timeline-icon {
       background: $timeline-color;
-      width: 90px;
       height: 50px;
       position: absolute;
       top: 0;
       left: calc(50% - 26px);
+      width: 170px;
       span {
         font-size: 25px;
         color: $primary-grey;
@@ -173,7 +156,7 @@ h4 {
         box-shadow: 8px 4px 0 rgba(0, 0, 0, 0.1);
       }
       .timeline-icon {
-        left: calc(50% - 62px);
+        left: calc(50% - 144px);
         span {
           right: auto;
           left: 2px;

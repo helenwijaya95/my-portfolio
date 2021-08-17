@@ -1,11 +1,5 @@
 <template>
   <div>
-    <cross-cursor />
-    <client-only>
-      <!-- <falling-leaves /> -->
-      <cross-cursor />
-    </client-only>
-
     <TimelineItem :experiences="experiences" />
   </div>
 </template>
@@ -20,45 +14,41 @@ export default {
           position: 'Frontend Developer Associate Team Leader',
           company: 'Xtremax',
           companySite: 'https://www.xtremax.com/',
-          startYear: '2019',
+          startYear: '2020-Present',
           jobdesc: [
             'Managed & led a team of 4',
-            'Code review',
-            'Unit testing using Jest & Vue Test Utils',
+            'Optimized website performance',
+            'Project resource planning',
+            'Micro Frontend using Vue.js and Qiankun',
           ],
         },
         {
-          position: 'Frontend Developer Associate Team Leader2',
+          position: 'Web Developer',
           company: 'Xtremax',
           companySite: 'https://www.xtremax.com/',
           startYear: '2019',
           jobdesc: [
-            'Managed & led a team of 4',
-            'Code review',
-            'Unit testing using Jest & Vue Test Utils',
+            'Supported knowledge transfer from a partner agency using React.js',
+            'Assisted in technical meetings',
           ],
         },
         {
-          position: 'Frontend Developer Associate Team Leader3',
+          position: 'Frontend Developer',
           company: 'Xtremax',
           companySite: 'https://www.xtremax.com/',
-          startYear: '2019',
+          startYear: '2017-2019',
           jobdesc: [
-            'Managed & led a team of 4',
-            'Code review',
-            'Unit testing using Jest & Vue Test Utils',
+            'Built HTML Email',
+            'Converted design into web pages using jQuery, CSS, HTML, Vue.js',
+            'Created unit testing using Jest & Vue Test Utils',
           ],
         },
         {
-          position: 'Frontend Developer Associate Team Leader4',
-          company: 'Xtremax',
-          companySite: 'https://www.xtremax.com/',
-          startYear: '2019',
-          jobdesc: [
-            'Managed & led a team of 4',
-            'Code review',
-            'Unit testing using Jest & Vue Test Utils',
-          ],
+          position: 'Intern',
+          company: 'PT LAPI Divusi',
+          companySite: 'http://divusi.co.id/',
+          startYear: '2016',
+          jobdesc: ['Designed CI/CD workflow'],
         },
       ],
     }

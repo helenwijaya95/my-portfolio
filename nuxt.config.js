@@ -86,7 +86,8 @@ export default {
   },
   googleFonts: {
     families: {
-      'Press+Start+2P': [300, 400, 500, 600, 700],
+      'Press+Start+2P': true,
+      Dosis: [300, 400, 500, 600, 700],
     },
     display: 'swap',
     preload: true,

@@ -89,6 +89,7 @@ export default {
   top: 50%;
   transform: translateY(-50%);
   line-height: 5rem;
+  padding: 0;
 }
 
 .menu li a {

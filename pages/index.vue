@@ -3,12 +3,12 @@
     <div>
       <!-- <img src="~/static/img/marble.jpg" /> -->
       <!-- homepage -->
-      <falling-leaves />
+      <!-- <falling-leaves /> -->
       <div class="container">
         <Menu />
 
-        <text-distortion text="Hello, I'm Helen" />
-        <h2>I'm a frontend developer.</h2>
+        <text-distortion text="Hello,I'm Helen" />
+        <h2 class="subtitle">I'm a Frontend Developer.</h2>
         <social-media />
       </div>
     </div>
@@ -21,7 +21,7 @@ import Vue from 'vue'
 export default Vue.extend({})
 </script>
 
-<style>
+<style lang="scss" scoped>
 body {
   overflow-x: hidden;
 }
@@ -48,9 +48,9 @@ body {
 .subtitle {
   font-weight: 300;
   font-size: 42px;
-  color: #526488;
   word-spacing: 5px;
   padding-bottom: 15px;
+  font-family: $base-font;
 }
 
 .links {

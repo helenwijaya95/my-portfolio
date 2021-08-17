@@ -15,7 +15,7 @@
             <!-- <text-distortion :text="exp.position" /> -->
             <h2>
               <span>{{ exp.position }}</span>
-              <a class="action-link" :href="exp.companySite"
+              <a v-if="exp.company" class="action-link" :href="exp.companySite"
                 >@ {{ exp.company }}</a
               >
             </h2>
@@ -107,19 +107,22 @@ export default {
   }
 }
 
-// h2 span,
-// li {
-//   font-size: 22px;
-//   line-height: 1.5;
-// }
-// h2 span {
-//   text-align: left;
-//   display: block;
-// }
-
 ul {
   text-align: left;
   margin-top: 20px;
+  font-size: 18px;
+  list-style: none;
+
+  li {
+    &::before {
+      content: '\25AA';
+      color: $primary-red;
+      font-weight: bold;
+      display: inline-block;
+      width: 1em;
+      margin-left: -1em;
+    }
+  }
 }
 .branch {
   position: absolute;
