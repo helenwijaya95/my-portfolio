@@ -1,11 +1,12 @@
 <template>
   <div>
     <cross-cursor />
-
+    <!-- <div>
+      <span data-splitting class="menu__item-title">{{ text }}</span>
+    </div> -->
     <div class="menu">
       <a href="#content-1" class="menu__item">
         <span data-splitting class="menu__item-title">{{ text }}</span>
-        <!-- <span data-splitting class="menu__item-sub">A Frontend Developer</span> -->
       </a>
     </div>
   </div>

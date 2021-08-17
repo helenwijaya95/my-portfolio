@@ -28,9 +28,7 @@ export default {
   components: true,
 
   // Modules for dev and build (recommended): https://go.nuxtjs.dev/config-modules
-  buildModules: [
-    // https://go.nuxtjs.dev/typescript
-  ],
+  buildModules: ['@nuxtjs/google-fonts'],
 
   // Modules: https://go.nuxtjs.dev/config-modules
   modules: [
@@ -85,5 +83,12 @@ export default {
   // Build Configuration: https://go.nuxtjs.dev/config-build
   build: {
     transpile: ['gsap'],
+  },
+  googleFonts: {
+    families: {
+      'Press+Start+2P': [300, 400, 500, 600, 700],
+    },
+    display: 'swap',
+    preload: true,
   },
 }
