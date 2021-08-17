@@ -13,16 +13,18 @@
       <div v-show="isMenuActive" class="menu-wrapper">
         <ul class="menu">
           <li>
-            <a href="#" class="action-link">Home</a>
+            <NuxtLink to="/" class="action-link"> Home </NuxtLink>
           </li>
           <li>
-            <a href="#" class="action-link">About Me</a>
+            <NuxtLink to="/About" class="action-link"> About Me </NuxtLink>
           </li>
           <li>
-            <a href="#" class="action-link">My Journey</a>
+            <NuxtLink to="/Experience" class="action-link"
+              >Experience
+            </NuxtLink>
           </li>
           <li>
-            <a href="#" class="action-link">Blog</a>
+            <NuxtLink to="/" class="action-link"> Blog </NuxtLink>
           </li>
         </ul>
       </div>
@@ -90,16 +92,7 @@ export default {
 }
 
 .menu li a {
-  color: black;
+  color: $primary-red;
   text-decoration: none;
-}
-
-/* fade animation */
-.fade-enter-active,
-.fade-leave-active {
-  transition: opacity 0.2s;
-}
-.fade-enter, .fade-leave-to /* .fade-leave-active below version 2.1.8 */ {
-  opacity: 0;
 }
 </style>
