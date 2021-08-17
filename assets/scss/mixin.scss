@@ -61,6 +61,8 @@
   }
 
   &:hover {
+    color: black;
+
     &::after {
       width: 105%;
     }

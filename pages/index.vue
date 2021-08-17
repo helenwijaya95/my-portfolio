@@ -7,26 +7,10 @@
       <div class="container">
         <Menu />
 
-        <social-media />
         <text-distortion text="Hello, I'm Helen" />
-        <p class="underline">I'm a frontend developer</p>
+        <h2>I'm a frontend developer.</h2>
+        <social-media />
       </div>
-
-      <!-- about me section -->
-      <div class="container">
-        <h1>About me</h1>
-        <p>I write code to build user-friendly web pages.</p>
-        <p>The technology that I have been using for my works are:</p>
-        <ul>
-          <li>javascript(ES6)</li>
-          <li>Vue.js</li>
-          <li>jQuery</li>
-        </ul>
-        <p>I have been exploring React.js lately.</p>
-      </div>
-
-      <!-- my journey section -->
-      <div class="container"></div>
     </div>
   </client-only>
 </template>

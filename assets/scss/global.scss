@@ -1,19 +1,101 @@
-@import 'mixin.scss';
 // variable
 $primary-red: #d03939;
 $primary-grey: #f0f0f0;
+// Typography
+$base-font: helvetica, arial, tahoma, verdana;
+$base-font-title: 'Press Start 2P', arial, tahoma, verdana;
+
+$base-font-color: black;
+@import 'mixin.scss';
+@import 'timeline.scss';
 
 // global styles
+
+body {
+  background-color: $primary-grey;
+  background-size: cover;
+  margin: 0;
+  padding: 0;
+  font-family: $base-font;
+  line-height: 20px;
+  font-size: 14px;
+  color: $base-font-color;
+  overflow-x: hidden;
+}
+.container {
+  margin: 0 auto;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  flex-direction: column;
+}
+
+section {
+  margin-top: 25px;
+}
+p {
+  margin-bottom: 15px;
+}
+
+#__layout {
+  overflow-y: hidden;
+}
+
+.inner-container {
+  padding: 25px;
+  min-height: 100vh;
+  overflow-y: hidden;
+}
+
 .underline {
   text-decoration: underline;
 }
 
 .action-link {
   position: relative;
+  color: $primary-red;
   text-decoration: none;
 
   // styled underline
   @include styled-underline-on-hover;
+}
+
+/* transition */
+/** fade **/
+.fade-enter-active,
+.fade-leave-active {
+  transition: opacity 0.2s;
+}
+.fade-enter, .fade-leave-to /* .fade-leave-active below version 2.1.8 */ {
+  opacity: 0;
+}
+
+/** slide-down **/
+
+ul {
+  cursor: pointer;
+}
+
+.slide-enter-active {
+  transition: 0.3s ease-in;
+}
+
+.slide-leave-active {
+  transition-duration: 0.3s cubic-bezier(0, 1, 0.5, 1);
+}
+
+.slide-enter-to,
+.slide-leave {
+  max-height: 100px;
+  overflow: hidden;
+}
+
+.slide-enter,
+.slide-leave-to {
+  overflow: hidden;
+  max-height: 0;
 }
 
 // leaf animation
@@ -44,7 +126,6 @@ $primary-grey: #f0f0f0;
 }
 
 //keyframes
-
 @keyframes MoveRotate15 {
   0%,
   100% {
