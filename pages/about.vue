@@ -1,7 +1,11 @@
 <template>
   <!-- about me section -->
   <div class="inner-container">
-    <h1>About me</h1>
+    <client-only>
+      <!-- <falling-leaves /> -->
+      <!-- <cross-cursor /> -->
+      <TextDistortion text="About Me" :is-small="true" />
+    </client-only>
     <p>I write code to build website.</p>
     <p>The technology that I have been using are:</p>
     <ul>
