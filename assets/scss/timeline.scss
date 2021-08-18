@@ -77,9 +77,21 @@ a {
   }
 
   .timeline-item {
-    margin-bottom: 50px;
     position: relative;
     @extend %clearfix;
+
+    .timeline-box {
+      @extend %clearfix;
+      padding-bottom: 50px;
+
+      &:hover {
+        .timeline-icon {
+          span {
+            color: $primary-grey;
+          }
+        }
+      }
+    }
 
     .timeline-icon {
       background: $timeline-color;
@@ -90,12 +102,12 @@ a {
       width: 170px;
       span {
         font-size: 25px;
-        color: $primary-grey;
+        color: $base-font-color;
         text-align: left;
         display: block;
         padding: 10px 0 0 10px;
         position: relative;
-        font-weight: 400;
+        font-weight: 500;
       }
 
       &::before {
@@ -112,7 +124,6 @@ a {
 
     .timeline-content {
       width: 45%;
-      background: $primary-grey;
       padding: 20px;
       box-shadow: 0 3px 0 rgba(0, 0, 0, 0.1);
       border-radius: 5px;
@@ -129,6 +140,7 @@ a {
         font-size: 22px;
         text-align: center;
         line-height: 1.5;
+        background: $primary-grey;
 
         span {
           display: block;

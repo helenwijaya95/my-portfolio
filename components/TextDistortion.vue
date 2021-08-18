@@ -1,6 +1,5 @@
 <template>
   <div>
-    <cross-cursor />
     <!-- <div>
       <span data-splitting class="menu__item-title">{{ text }}</span>
     </div> -->

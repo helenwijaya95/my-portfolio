@@ -1,9 +1,8 @@
 <template>
   <!-- about me section -->
   <div class="inner-container">
-    <cross-cursor />
     <client-only>
-      <falling-leaves />
+      <!-- <falling-leaves /> -->
       <!-- <cross-cursor /> -->
       <TextDistortion text="Experience" :is-small="true" />
     </client-only>

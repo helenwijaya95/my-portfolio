@@ -8,22 +8,27 @@
           class="timeline-item"
           :class="{ right: (idx + 1) % 2 === 0 }"
         >
-          <div class="timeline-icon">
-            <span>{{ exp.startYear }}</span>
-          </div>
-          <div class="timeline-content">
-            <!-- <text-distortion :text="exp.position" /> -->
-            <h2>
-              <span>{{ exp.position }}</span>
-              <a v-if="exp.company" class="action-link" :href="exp.companySite"
-                >@ {{ exp.company }}</a
-              >
-            </h2>
-            <ul>
-              <li v-for="jobdesc in exp.jobdesc" :key="jobdesc">
-                {{ jobdesc }}
-              </li>
-            </ul>
+          <div class="timeline-box js-scroll fade-in-bottom">
+            <div class="timeline-icon">
+              <span>{{ exp.startYear }}</span>
+            </div>
+            <div class="timeline-content">
+              <!-- <text-distortion :text="exp.position" /> -->
+              <h2>
+                <span>{{ exp.position }}</span>
+                <a
+                  v-if="exp.company"
+                  class="action-link"
+                  :href="exp.companySite"
+                  >@ {{ exp.company }}</a
+                >
+              </h2>
+              <ul>
+                <li v-for="jobdesc in exp.jobdesc" :key="jobdesc">
+                  {{ jobdesc }}
+                </li>
+              </ul>
+            </div>
           </div>
         </div>
       </div>
@@ -45,9 +50,7 @@
               </li>
             </ul>
           </div>
-          <div class="branch">
-            <img src="~static/img/branch.png" />
-          </div>
+         
         </div>
       </div>
     </div> -->
@@ -55,8 +58,10 @@
 </template>
 
 <script>
+import AnimateOnScrollMixin from '../mixins/AnimateOnScroll.js'
 export default {
   name: 'TimelineItem',
+  mixins: [AnimateOnScrollMixin],
   props: {
     experiences: {
       type: Array,
@@ -71,6 +76,10 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+section {
+  z-index: 1;
+  position: relative;
+}
 .action-link {
   &::before {
     width: 20px;
@@ -114,6 +123,7 @@ ul {
   list-style: none;
 
   li {
+    line-height: 1.5;
     &::before {
       content: '\25AA';
       color: $primary-red;
@@ -122,18 +132,6 @@ ul {
       width: 1em;
       margin-left: -1em;
     }
-  }
-}
-.branch {
-  position: absolute;
-  bottom: -70px;
-  left: -30px;
-  transform: rotate(-5deg) !important;
-  width: 727px;
-  opacity: 0.5;
-  img {
-    transform: none !important;
-    width: 100%;
   }
 }
 </style>

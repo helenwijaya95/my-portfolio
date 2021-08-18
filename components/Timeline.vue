@@ -1,6 +1,17 @@
 <template>
   <div>
     <TimelineItem :experiences="experiences" />
+    <div class="bg-wrapper">
+      <div class="branch-1">
+        <img src="~static/img/branch.png" />
+      </div>
+      <div class="branch-2">
+        <img src="~static/img/branch.png" />
+      </div>
+      <div class="branch-3">
+        <img src="~static/img/branch.png" />
+      </div>
+    </div>
   </div>
 </template>
 
@@ -48,7 +59,7 @@ export default {
           company: 'PT LAPI Divusi',
           companySite: 'http://divusi.co.id/',
           startYear: '2016',
-          jobdesc: ['Designed CI/CD workflow'],
+          jobdesc: ['Designed CI/CD workflow on Bamboo and Jenkins'],
         },
       ],
     }
@@ -56,10 +67,42 @@ export default {
 }
 </script>
 
-<style>
-.line {
-  height: 50px;
-  width: 2px;
-  background: black;
+<style lang="scss" scoped>
+.bg-wrapper {
+  position: fixed;
+  top: 0;
+  left: 0;
+  content: '';
+  width: 100%;
+  height: 100%;
+}
+[class^='branch-'] {
+  position: absolute;
+  top: 0;
+  left: -30px;
+  transform: rotate(-5deg) !important;
+  width: 727px;
+  opacity: 0.2;
+  img {
+    transform: none !important;
+    width: 100%;
+  }
+}
+.branch-1 {
+  top: 10vh;
+  left: -362px;
+}
+.branch-2 {
+  top: 35vh;
+  left: auto;
+  right: -159px;
+  width: 800px;
+  transform: rotate(-159deg) !important;
+}
+.branch-3 {
+  top: 79vh;
+  left: -369px;
+  width: 518px;
+  transform: rotate(3deg) !important;
 }
 </style>
