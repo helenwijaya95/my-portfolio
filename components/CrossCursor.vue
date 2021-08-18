@@ -103,6 +103,10 @@ export default {
       })
     },
   },
+  destroy() {
+    window.removeEventListener('mouseenter', () => cursor.enter())
+    window.removeEventListener('mouseleave', () => cursor.enter())
+  },
 }
 </script>
 
