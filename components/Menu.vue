@@ -13,18 +13,31 @@
       <div v-show="isMenuActive" class="menu-wrapper">
         <ul class="menu">
           <li>
-            <NuxtLink to="/" class="action-link"> Home </NuxtLink>
+            <NuxtLink to="/" class="action-link" @click.native="toggleMenu">
+              Home
+            </NuxtLink>
           </li>
           <li>
-            <NuxtLink to="/About" class="action-link"> About Me </NuxtLink>
+            <NuxtLink
+              to="/About"
+              class="action-link"
+              @click.native="toggleMenu"
+            >
+              About Me
+            </NuxtLink>
           </li>
           <li>
-            <NuxtLink to="/Experience" class="action-link"
+            <NuxtLink
+              to="/Experience"
+              class="action-link"
+              @click.native="toggleMenu"
               >Experience
             </NuxtLink>
           </li>
           <li>
-            <NuxtLink to="/" class="action-link"> Blog </NuxtLink>
+            <NuxtLink to="/" class="action-link" @click.native="toggleMenu">
+              Blog
+            </NuxtLink>
           </li>
         </ul>
       </div>
@@ -40,7 +53,6 @@ export default {
       isMenuActive: false,
     }
   },
-
   methods: {
     toggleMenu() {
       this.isMenuActive = !this.isMenuActive
@@ -50,6 +62,9 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+header {
+  margin-bottom: 50px;
+}
 .active {
   @include styled-underline;
   &::before {
@@ -62,13 +77,13 @@ export default {
   right: 0;
   top: 0;
   padding: 20px;
-  z-index: 2;
+  z-index: 6;
   color: black;
-  cursor: pointer;
 
   .menu-btn {
     position: relative;
     text-decoration: none;
+    font-size: 26px;
   }
 }
 
@@ -76,7 +91,7 @@ export default {
   position: fixed;
   width: 100vw;
   height: 100vh;
-  z-index: 1;
+  z-index: 5;
   right: 0;
   top: 0;
   background-color: $primary-grey;

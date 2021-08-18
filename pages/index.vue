@@ -5,8 +5,6 @@
       <!-- homepage -->
       <!-- <falling-leaves /> -->
       <div class="container">
-        <Menu />
-
         <text-distortion text="Hello,I'm Helen" />
         <h2 class="subtitle">I'm a Frontend Developer.</h2>
         <social-media />
