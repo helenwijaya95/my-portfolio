@@ -65,6 +65,22 @@ export default {
         set: '@fortawesome/free-brands-svg-icons',
         icons: ['faGithub'],
       },
+      {
+        set: '@fortawesome/free-solid-svg-icons',
+        icons: ['faWrench'],
+      },
+      {
+        set: '@fortawesome/free-solid-svg-icons',
+        icons: ['faFileCode'],
+      },
+      {
+        set: '@fortawesome/free-solid-svg-icons',
+        icons: ['faCodeBranch'],
+      },
+      {
+        set: '@fortawesome/free-solid-svg-icons',
+        icons: ['faSearch'],
+      },
     ],
   },
   vue: {

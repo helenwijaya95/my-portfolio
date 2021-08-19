@@ -4,7 +4,7 @@ $primary-grey: #f0f0f0;
 // Typography
 $base-font: 'Dosis', helvetica, arial, tahoma, verdana;
 $base-font-title: 'Press Start 2P', arial, tahoma, verdana;
-
+$base-font-size: 18px;
 $base-font-color: black;
 $color-link-hover: black;
 $cursor-stroke-width: 1px;
@@ -44,13 +44,45 @@ h1,
 h2,
 h3,
 h4 {
-  font: {
-    family: $base-font;
-  }
+  font-family: $base-font;
+  margin-bottom: 20px;
+  font-weight: 600;
+}
+h2 {
+  font-size: 2em;
+}
+h3 {
+  font-size: 1.5em;
 }
 p {
   font-family: $base-font;
   margin-bottom: 15px;
+  font-size: $base-font-size;
+}
+
+strong {
+  color: $primary-red;
+  font-weight: 600;
+}
+// default bullets style
+ul {
+  text-align: left;
+  margin: 20px 0;
+  font-size: $base-font-size;
+  list-style: none;
+
+  li {
+    line-height: 1.5;
+
+    &::before {
+      content: '\25AA';
+      color: $primary-red;
+      font-weight: bold;
+      display: inline-block;
+      width: 1em;
+      margin-left: -1em;
+    }
+  }
 }
 
 #__layout {
@@ -62,8 +94,8 @@ p {
   font-size: 25px;
 }
 .inner-container {
-  padding: 25px;
-  min-height: 100vh;
+  padding: 30px;
+  min-height: calc(100vh - 50px);
   overflow-y: hidden;
 }
 
@@ -75,6 +107,7 @@ p {
   position: relative;
   color: $primary-red;
   text-decoration: none;
+  margin-left: 20px;
 
   // styled underline
   @include styled-underline-on-hover;
@@ -91,10 +124,6 @@ p {
 }
 
 /** slide-down **/
-
-ul {
-  cursor: pointer;
-}
 
 .slide-enter-active {
   transition: 0.3s ease-in;

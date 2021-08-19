@@ -6,7 +6,7 @@
       <!-- <falling-leaves /> -->
       <div class="container">
         <text-distortion text="Hello,I'm Helen" />
-        <h2 class="subtitle">I'm a Frontend Developer.</h2>
+        <h2 class="subtitle">I code to build website.</h2>
         <social-media />
       </div>
     </div>

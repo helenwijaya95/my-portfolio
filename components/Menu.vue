@@ -105,10 +105,19 @@ header {
   transform: translateY(-50%);
   line-height: 5rem;
   padding: 0;
+  margin: 0;
+
+  li {
+    a {
+      color: $primary-red;
+      text-decoration: none;
+    }
+    &::before {
+      display: none;
+    }
+  }
 }
 
 .menu li a {
-  color: $primary-red;
-  text-decoration: none;
 }
 </style>

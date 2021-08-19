@@ -1,6 +1,6 @@
 <template>
   <section class="wrapper">
-    <p>Connect with me:</p>
+    <p>Get in Touch</p>
     <div class="social-link">
       <a href="#">
         <font-awesome-icon :icon="['fab', 'linkedin']" />
@@ -23,6 +23,6 @@ export default {
 
 <style scoped>
 .social-link a {
-  font-size: 3.2rem;
+  font-size: 35px;
 }
 </style>

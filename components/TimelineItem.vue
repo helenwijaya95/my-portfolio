@@ -115,23 +115,4 @@ section {
     }
   }
 }
-
-ul {
-  text-align: left;
-  margin-top: 20px;
-  font-size: 18px;
-  list-style: none;
-
-  li {
-    line-height: 1.5;
-    &::before {
-      content: '\25AA';
-      color: $primary-red;
-      font-weight: bold;
-      display: inline-block;
-      width: 1em;
-      margin-left: -1em;
-    }
-  }
-}
 </style>
