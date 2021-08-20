@@ -97,9 +97,23 @@ export default {
   letter-spacing: -1px;
   color: $base-font-color;
   font-size: 45px;
+  line-height: 1.5;
 
   &.is-small {
     font-size: 35px;
+  }
+}
+
+@media (max-width:$max-tablet) {
+  .distortion-text {
+    font-size: 35px;
+    .subtitle {
+      font-size: 25px; 
+      line-height: 1;
+    }
+     &.is-small {
+      font-size: 25px;
+    }
   }
 }
 </style>

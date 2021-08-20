@@ -1,12 +1,4 @@
-*,
-*::after,
-*::before {
-  box-sizing: border-box;
-}
 
-:root {
-  font-size: 16px;
-}
 
 body {
   margin: 0;
@@ -55,17 +47,6 @@ body {
     opacity: 1;
     transform: scale3d(0.5, 0.5, 1);
   }
-}
-
-a {
-  text-decoration: underline;
-  color: var(--color-link);
-  outline: none;
-}
-
-a:hover {
-  color: var(--color-link-hover);
-  outline: none;
 }
 
 /* Better focus styles from https://developer.mozilla.org/en-US/docs/Web/CSS/:focus-visible */
@@ -156,6 +137,8 @@ a:focus-visible {
   display: block;
 }
 
+// responsive
+
 @media screen and (min-width: 53em) {
   .frame {
     position: fixed;
@@ -209,47 +192,4 @@ a:focus-visible {
   }
 }
 
-.cursor {
-  display: block;
-}
 
-@media (any-pointer: fine) {
-  .cursor {
-    position: fixed;
-    top: 0;
-    left: 0;
-    display: block;
-    pointer-events: none;
-    z-index: 1001;
-  }
-
-  .no-js .cursor {
-    display: none;
-  }
-
-  .cursor__line {
-    position: fixed;
-    display: block;
-    will-change: transform, opacity;
-  }
-
-  .cursor__line--horizontal {
-    top: -10px;
-    left: -10%;
-    width: 120%;
-    height: 20px;
-  }
-
-  .cursor__line--vertical {
-    left: -10px;
-    top: -10%;
-    height: 120%;
-    width: 20px;
-  }
-
-  .cursor__line-element {
-    fill: none;
-    stroke: var(--cursor-stroke);
-    stroke-width: var(--cursor-stroke-width);
-  }
-}
