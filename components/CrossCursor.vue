@@ -110,12 +110,10 @@ export default {
 }
 </script>
 
-<style scoped>
-.cursor {
-  display: block;
-}
+<style lang="scss" scoped>
 
-@media (any-pointer: fine) {
+ /* Large devices (desktops, 992px and up) */
+@media (min-width: $max-small-desktop), (any-pointer: fine){
   .cursor {
     position: fixed;
     top: 0;
@@ -155,4 +153,11 @@ export default {
     stroke-width: var(--cursor-stroke-width);
   }
 }
+
+@media (max-width: $max-small-desktop), (any-pointer: none) {
+  .cursor{
+    display:none;
+  }
+}
+
 </style>

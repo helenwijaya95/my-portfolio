@@ -6,7 +6,7 @@
         class="menu-btn"
         :class="{ active: isMenuActive }"
         @click.prevent="toggleMenu"
-        >Menu</a
+        >{{ isMenuActive ? 'Close' : 'Menu' }}</a
       >
     </div>
     <transition name="fade" mode="out-in">
@@ -84,6 +84,7 @@ header {
     position: relative;
     text-decoration: none;
     font-size: 26px;
+    cursor: pointer;
   }
 }
 
