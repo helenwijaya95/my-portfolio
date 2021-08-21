@@ -1,22 +1,32 @@
 <template>
-  <client-only>
-    <div>
-      <!-- <img src="~/static/img/marble.jpg" /> -->
-      <!-- homepage -->
-      <!-- <falling-leaves /> -->
-      <div class="container">
-        <text-distortion text="Hello,I'm Helen" />
-        <h2 class="subtitle">I code to build web pages</h2>
-        <social-media />
+  <div>
+    <client-only>
+      <div>
+        <!-- <img src="~/static/img/marble.jpg" /> -->
+        <!-- homepage -->
+        <div class="container">
+          <!-- <falling-leaves />
+          <cross-cursor /> -->
+
+          <text-distortion text="Hello,I'm Helen" />
+          <h2 class="subtitle">I code to build web pages</h2>
+          <social-media />
+        </div>
       </div>
-    </div>
-  </client-only>
+      <template slot="placeholder">
+        <loading-bar />
+      </template>
+    </client-only>
+  </div>
 </template>
 
 <script lang="ts">
 import Vue from 'vue'
+import LoadingBar from '~/components/LoadingBar.vue'
 
-export default Vue.extend({})
+export default Vue.extend({
+  components: { LoadingBar },
+})
 </script>
 
 <style lang="scss" scoped>
@@ -25,7 +35,6 @@ body {
 }
 .container {
   margin: 0 auto;
-  min-height: 100vh;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -45,9 +54,6 @@ body {
 
 .subtitle {
   font-weight: 300;
-  font-size: 42px;
-  word-spacing: 5px;
-  padding-bottom: 15px;
   font-family: $base-font;
 }
 

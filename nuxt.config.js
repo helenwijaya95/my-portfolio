@@ -108,5 +108,5 @@ export default {
     display: 'swap',
     preload: true,
   },
-  loading: '~/components/LoadingBar.vue',
+  // loading: '~/components/LoadingBar.vue',
 }
