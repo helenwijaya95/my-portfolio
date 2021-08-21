@@ -2,6 +2,7 @@
   <div>
     <Menu />
     <Nuxt />
+    <footer>Copyright © 2021 by <strong>Helen Wijaya</strong></footer>
   </div>
 </template>
 
@@ -52,5 +53,11 @@ html {
 .button--grey:hover {
   color: #fff;
   background-color: #35495e;
+}
+
+footer {
+  text-align: center;
+  font-size: 18px;
+  padding-bottom: 20px;
 }
 </style>
