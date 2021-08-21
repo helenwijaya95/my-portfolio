@@ -2,9 +2,10 @@
   <!-- about me section -->
   <div class="inner-container">
     <client-only>
-      <falling-leaves />
-      <!-- <cross-cursor /> -->
       <TextDistortion text="About Me" :is-small="true" />
+      <template slot="placeholder">
+        <div style="height: 52px" />
+      </template>
     </client-only>
     <section>
       <div class="background">
@@ -76,9 +77,9 @@
         </div>
       </div>
     </section>
-    <div class="symbol">
+    <!-- <div class="symbol">
       <span class="code">&#60;/&#62;</span>
-    </div>
+    </div> -->
   </div>
 </template>
 

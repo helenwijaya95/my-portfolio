@@ -1,7 +1,12 @@
 <template>
-  <div>
+  <div class="main-layout">
+    <client-only>
+      <falling-leaves />
+      <cross-cursor />
+    </client-only>
     <Menu />
     <Nuxt />
+
     <footer>Copyright © 2021 by <strong>Helen Wijaya</strong></footer>
   </div>
 </template>
@@ -59,5 +64,9 @@ footer {
   text-align: center;
   font-size: 18px;
   padding-bottom: 20px;
+}
+
+.main-layout {
+  overflow: hidden;
 }
 </style>

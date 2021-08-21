@@ -1,6 +1,5 @@
 <template>
   <header>
-    <cross-cursor />
     <div class="menu-btn-wrapper">
       <a
         class="menu-btn"
