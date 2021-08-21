@@ -33,27 +33,6 @@
         </div>
       </div>
     </div>
-
-    <!-- <div class="branch">
-      <img src="~static/img/branch.png" />
-    </div> -->
-    <!-- <div class="box-wrapper">
-      <div v-for="exp in experiences" :key="exp.position" class="timeline-row">
-        <div class="timeline-box">
-          <div class="header">
-           
-          </div>
-          <div class="body">
-            <ul>
-              <li v-for="jobdesc in exp.jobdesc" :key="jobdesc">
-                {{ jobdesc }}
-              </li>
-            </ul>
-          </div>
-         
-        </div>
-      </div>
-    </div> -->
   </section>
 </template>
 

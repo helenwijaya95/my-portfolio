@@ -93,10 +93,10 @@ export default {
   left: -362px;
 }
 .branch-2 {
-  top: 35vh;
+  top: 60vh;
   left: auto;
   right: -159px;
-  width: 800px;
+  width: 430px;
   transform: rotate(-159deg) !important;
 }
 .branch-3 {
@@ -104,5 +104,14 @@ export default {
   left: -369px;
   width: 518px;
   transform: rotate(3deg) !important;
+}
+
+@media (max-width: $max-tablet) {
+  .branch-2 {
+    top: 79vh;
+    left: auto;
+    right: -400px;
+    width: 100%;
+  }
 }
 </style>
