@@ -58,8 +58,8 @@ export default {
         icons: ['faLinkedin'],
       },
       {
-        set: '@fortawesome/free-brands-svg-icons',
-        icons: ['faFacebook'],
+        set: '@fortawesome/free-solid-svg-icons',
+        icons: ['faEnvelope'],
       },
       {
         set: '@fortawesome/free-brands-svg-icons',
@@ -108,4 +108,5 @@ export default {
     display: 'swap',
     preload: true,
   },
+  loading: '~/components/LoadingBar.vue',
 }

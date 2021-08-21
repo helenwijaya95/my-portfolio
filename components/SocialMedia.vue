@@ -1,15 +1,15 @@
 <template>
   <section class="wrapper">
-    <p>Get in Touch</p>
+    <p style="font-size: 20px">Get in Touch</p>
     <div class="social-link">
-      <a href="#">
+      <a href="https://www.linkedin.com/in/helen-wijaya/">
         <font-awesome-icon :icon="['fab', 'linkedin']" />
       </a>
-      <a href="#">
-        <font-awesome-icon :icon="['fab', 'facebook']" />
-      </a>
-      <a href="#">
+      <a href="https://github.com/helenwijaya95/">
         <font-awesome-icon :icon="['fab', 'github']" />
+      </a>
+      <a href="mailto:helen.wijaya95@gmail.com">
+        <font-awesome-icon :icon="['fas', 'envelope']" />
       </a>
     </div>
   </section>
@@ -23,6 +23,7 @@ export default {
 
 <style scoped>
 .social-link a {
-  font-size: 35px;
+  font-size: 40px;
+  margin: 5px;
 }
 </style>

@@ -19,7 +19,7 @@
           </li>
           <li>
             <NuxtLink
-              to="/About"
+              to="/about"
               class="action-link"
               @click.native="toggleMenu"
             >
@@ -28,15 +28,10 @@
           </li>
           <li>
             <NuxtLink
-              to="/Experience"
+              to="/experience"
               class="action-link"
               @click.native="toggleMenu"
               >Experience
-            </NuxtLink>
-          </li>
-          <li>
-            <NuxtLink to="/" class="action-link" @click.native="toggleMenu">
-              Blog
             </NuxtLink>
           </li>
         </ul>
@@ -62,8 +57,12 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+a.nuxt-link-exact-active {
+  @include styled-underline;
+  color: $base-font-color;
+}
 header {
-  margin-bottom: 50px;
+  position: absolute;
 }
 .active {
   @include styled-underline;
@@ -109,16 +108,9 @@ header {
   margin: 0;
 
   li {
-    a {
-      color: $primary-red;
-      text-decoration: none;
-    }
     &::before {
       display: none;
     }
   }
-}
-
-.menu li a {
 }
 </style>
