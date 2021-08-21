@@ -1,7 +1,7 @@
 @mixin styled-underline {
   &::after {
     content: '';
-    width: 105px;
+    width: 105%;
     height: 2px;
     border-top-left-radius: 50%;
     border-bottom-left-radius: 50%;

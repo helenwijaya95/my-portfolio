@@ -1,6 +1,6 @@
 <template>
   <section>
-    <div class="container">
+    <div>
       <div id="timeline">
         <div
           v-for="(exp, idx) in experiences"

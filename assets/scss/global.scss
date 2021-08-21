@@ -43,7 +43,7 @@ body {
 }
 .container {
   margin: 0 auto;
-  min-height: 100vh;
+  min-height: calc(100vh - 40px);
   display: flex;
   justify-content: center;
   align-items: center;
@@ -62,7 +62,7 @@ h4 {
   font-family: $base-font;
   margin-bottom: 20px;
   font-weight: 600;
-  line-height:1.5;
+  line-height: 1.5;
 }
 h2 {
   font-size: 2em;
@@ -80,12 +80,11 @@ a {
   color: $primary-red;
   outline: none;
 
-  &:hover{
+  &:hover {
     color: $base-font-color;
     outline: none;
   }
 }
-
 
 strong {
   color: $primary-red;
@@ -122,8 +121,10 @@ ul {
 }
 .inner-container {
   padding: 30px;
-  min-height: calc(100vh - 50px);
-  overflow-y: hidden;
+  min-height: calc(100vh - 40px);
+  overflow: hidden;
+  max-width: 1100px;
+  margin: 0 auto;
 }
 
 .underline {

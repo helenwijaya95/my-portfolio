@@ -196,8 +196,30 @@ a {
     }
   }
 }
+// responsive
+@media screen and (max-width: $max-tablet) {
+  #timeline {
+    ul {
+      padding-left: 5px;
+    }
+    .timeline-item {
+      &.right {
+        .timeline-icon {
+          left: calc(47% - 144px);
+        }
+      }
+      .timeline-icon {
+        left: calc(53% - 26px);
 
-@media screen and (max-width: 768px) {
+        span {
+          color: $primary-grey;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: $max-phone) {
   #timeline {
     margin: 30px;
     padding: 0px;
@@ -207,26 +229,66 @@ a {
     }
 
     .timeline-item {
-      &.right:before {
-        left: 10%;
-        margin-left: -6px;
-        border-left: 0;
-        border-right: 7px solid $timeline-color;
-      }
-      .timeline-content {
-        width: 90%;
-        float: right;
-
-        &:before {
+      &.right {
+        &::before {
           left: 10%;
           margin-left: -6px;
           border-left: 0;
           border-right: 7px solid $timeline-color;
         }
+
+        .timeline-icon {
+          left: -50px;
+
+          &::before {
+            right: -5px;
+            left: auto;
+            bottom: -5px;
+          }
+          span {
+            text-align: left;
+            color: $primary-grey;
+            padding: 10px 0 0 10px;
+          }
+        }
+
+        .timeline-content {
+          float: none;
+
+          &:before {
+            left: 20px;
+            top: -7px;
+            margin-left: 0;
+            border-left: 7px solid transparent;
+            border-top: 0;
+            border-right: 7px solid transparent;
+            border-bottom: 7px solid $primary-red;
+          }
+        }
+      }
+      .timeline-content {
+        width: 90%;
+        float: none;
+        position: relative;
+        margin-top: 15px;
+        &:before {
+          left: 20px;
+          top: -7px;
+          margin-left: 0;
+          border-left: 7px solid transparent;
+          border-top: 0;
+          border-right: 7px solid transparent;
+          border-bottom: 7px solid $primary-red;
+        }
+
+        h2 {
+          text-align: left;
+        }
       }
 
       .timeline-icon {
-        left: 0;
+        left: -50px;
+        position: relative;
       }
     }
   }

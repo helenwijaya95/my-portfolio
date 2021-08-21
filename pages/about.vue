@@ -236,4 +236,16 @@ h3 {
     box-shadow: 0px 0px 0 rgba(0, 0, 0, 0.1);
   }
 }
+
+// responsive
+@media (max-width: $max-phone) {
+  .browser {
+    .sidebar {
+      display: none;
+    }
+    .content {
+      width: calc(100% - 35px);
+    }
+  }
+}
 </style>

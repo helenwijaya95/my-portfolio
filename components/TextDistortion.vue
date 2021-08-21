@@ -89,9 +89,6 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-.distortion {
-  margin: 10px;
-}
 .distortion-text {
   font-family: $base-font-title;
   letter-spacing: -1px;
@@ -104,15 +101,15 @@ export default {
   }
 }
 
-@media (max-width:$max-tablet) {
+@media (max-width: $max-tablet) {
   .distortion-text {
-    font-size: 35px;
+    font-size: 37px;
     .subtitle {
-      font-size: 25px; 
+      font-size: 30px;
       line-height: 1;
     }
-     &.is-small {
-      font-size: 25px;
+    &.is-small {
+      font-size: 30px;
     }
   }
 }
