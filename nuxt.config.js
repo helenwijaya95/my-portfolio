@@ -12,7 +12,7 @@ export default {
     ],
     script: [
       {
-        src: 'https://cdnjs.cloudflare.com/ajax/libs/gsap/1.18.0/TweenMax.min.js',
+        // src: 'https://cdnjs.cloudflare.com/ajax/libs/gsap/1.18.0/TweenMax.min.js',
       },
     ],
     link: [

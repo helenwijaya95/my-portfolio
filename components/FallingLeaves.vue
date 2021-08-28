@@ -8,8 +8,9 @@ Credits:
 a Pen by DIACO : twitter.com/Diaco_ml  ||  codepen.io/MAW
 powered by GSAP : https://www.greensock.com/
 */
-import '../assets/scss/falling-leaves.scss'
+import gsap from 'gsap'
 
+import '../assets/scss/falling-leaves.scss'
 export default {
   name: 'FallingLeaves',
   data() {
@@ -19,8 +20,8 @@ export default {
     }
   },
   mounted() {
-    TweenLite.set('#falling-leaves', { perspective: 600 })
-    TweenLite.set('.fall-animation-img', {
+    gsap.set('#falling-leaves', { perspective: 600 })
+    gsap.set('.fall-animation-img', {
       xPercent: '-50%',
       yPercent: '-100%',
     })
@@ -30,7 +31,7 @@ export default {
     let i
     for (i = 0; i < total; i++) {
       const Div = document.createElement('div')
-      TweenLite.set(Div, {
+      gsap.set(Div, {
         attr: { class: 'dot' },
         x: this.R(0, this.w),
         y: this.R(-200, -150),
@@ -42,25 +43,28 @@ export default {
   },
   methods: {
     animate(elm) {
-      TweenMax.to(elm, this.R(6, 15), {
+      gsap.to(elm, {
+        duration: this.R(6, 15),
         y: this.h + 100,
-        ease: Linear.easeNone,
+        ease: 'linear',
         repeat: -1,
         delay: -15,
       })
-      TweenMax.to(elm, this.R(4, 8), {
+      gsap.to(elm, {
+        duration: this.R(4, 8),
         x: '+=100',
         rotationZ: this.R(0, 180),
         repeat: -1,
         yoyo: true,
-        ease: Sine.easeInOut,
+        ease: 'sine.inout',
       })
-      TweenMax.to(elm, this.R(2, 8), {
+      gsap.to(elm, {
+        duration: this.R(2, 8),
         rotationX: this.R(0, 360),
         rotationY: this.R(0, 360),
         repeat: -1,
         yoyo: true,
-        ease: Sine.easeInOut,
+        ease: 'sine.inout',
         delay: -5,
       })
     },
