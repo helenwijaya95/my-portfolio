@@ -7,8 +7,8 @@
         <!-- <img src="~/static/img/marble.jpg" /> -->
         <!-- homepage -->
         <div class="container">
-          <!-- <falling-leaves />
-          <cross-cursor /> -->
+          <!-- <falling-leaves /> -->
+          <cross-cursor />
 
           <text-distortion text="Hello,I'm Helen" />
           <h2 class="subtitle">I code to build web pages</h2>
@@ -24,10 +24,19 @@
 
 <script lang="ts">
 import Vue from 'vue'
+import CrossCursor from '../components/CrossCursor.vue'
 import LoadingBar from '~/components/LoadingBar.vue'
 
 export default Vue.extend({
-  components: { LoadingBar },
+  components: {
+    LoadingBar,
+    CrossCursor,
+    TextDistortion: () => {
+      if (process.client) {
+        return import('../components/TextDistortion.vue')
+      }
+    },
+  },
 })
 </script>
 

@@ -5,7 +5,7 @@
       <cross-cursor />
 
       <div class="page-title">
-        <TextDistortion text="Experience" :is-small="true" />
+        <text-distortion text="Experience" :is-small="true" />
       </div>
 
       <template slot="placeholder">
@@ -17,8 +17,18 @@
 </template>
 
 <script>
+import CrossCursor from '../components/CrossCursor.vue'
+
 export default {
   name: 'Experience',
+  components: {
+    CrossCursor,
+    TextDistortion: () => {
+      if (process.client) {
+        return import('../components/TextDistortion.vue')
+      }
+    },
+  },
 }
 </script>
 
