@@ -1,5 +1,10 @@
 <template>
   <header>
+    <div class="logo">
+      <NuxtLink to="/">
+        <img src="~static/img/Personal Logo_v3.png" />
+      </NuxtLink>
+    </div>
     <div class="menu-btn-wrapper">
       <a
         class="menu-btn"
@@ -56,12 +61,15 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-a.nuxt-link-exact-active {
+.menu a.nuxt-link-exact-active {
   @include styled-underline;
   color: $base-font-color;
 }
 header {
-  position: absolute;
+  position: relative;
+  z-index: 10;
+  padding: 20px;
+  width: 100%;
 }
 .active {
   @include styled-underline;
@@ -110,6 +118,13 @@ header {
     &::before {
       display: none;
     }
+  }
+}
+.logo {
+  width: 120px;
+
+  img {
+    width: 100%;
   }
 }
 </style>
