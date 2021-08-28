@@ -3,13 +3,13 @@
     <TimelineItem :experiences="experiences" />
     <div class="bg-wrapper">
       <div class="branch-1">
-        <img src="~static/img/branch.png" />
+        <img src="~static/img/Branch.png" />
       </div>
       <div class="branch-2">
-        <img src="~static/img/branch.png" />
+        <img src="~static/img/Branch.png" />
       </div>
       <div class="branch-3">
-        <img src="~static/img/branch.png" />
+        <img src="~static/img/Branch.png" />
       </div>
     </div>
   </div>
