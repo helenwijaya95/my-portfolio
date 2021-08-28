@@ -2,6 +2,8 @@
   <!-- about me section -->
   <div class="inner-container">
     <client-only>
+      <cross-cursor />
+
       <div class="page-title">
         <TextDistortion text="Experience" :is-small="true" />
       </div>

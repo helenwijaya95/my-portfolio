@@ -1,6 +1,8 @@
 <template>
   <div>
     <client-only>
+      <cross-cursor />
+
       <div>
         <!-- <img src="~/static/img/marble.jpg" /> -->
         <!-- homepage -->

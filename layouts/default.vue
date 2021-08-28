@@ -2,7 +2,6 @@
   <div class="main-layout">
     <client-only>
       <falling-leaves />
-      <cross-cursor />
     </client-only>
     <Header />
     <Nuxt />
