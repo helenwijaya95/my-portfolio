@@ -2,14 +2,16 @@
   <!-- about me section -->
   <div class="inner-container">
     <client-only>
-      <TextDistortion text="About Me" :is-small="true" />
+      <div class="page-title">
+        <TextDistortion text="About Me" :is-small="true" />
+      </div>
       <template slot="placeholder">
         <div style="height: 52px" />
       </template>
     </client-only>
     <section>
       <div class="background">
-        <div class="browser">
+        <div class="window">
           <div class="menu-bar">
             <div class="action-menu">
               <div class="btn"></div>
@@ -19,7 +21,11 @@
           </div>
           <div class="body">
             <div class="toolbar">
-              <div class="btn-icon">
+              <div
+                class="btn-icon"
+                :class="isSidebarOpen ? 'red' : 'black'"
+                @click="toggleSidebar"
+              >
                 <font-awesome-icon :icon="['fas', 'file-code']" />
               </div>
               <div class="btn-icon">
@@ -32,45 +38,51 @@
                 <font-awesome-icon :icon="['fas', 'wrench']" />
               </div>
             </div>
-            <div class="sidebar">
+            <div v-show="isSidebarOpen" class="sidebar">
               <div class="line-wrapper">
                 <div class="line"></div>
                 <div class="line"></div>
                 <div class="line"></div>
               </div>
             </div>
+
             <div class="content">
               <div class="text-wrapper">
-                <h2>Hi, my name is Helen Wijaya.</h2>
-                <h3>I'm a frontend developer.</h3>
-                <p>
-                  I'm <strong>passionate</strong> when it comes to
-                  <strong>making design alive</strong> through code.
-                </p>
-                <p>
-                  <strong>Four years experiences </strong> in a digital agency,
-                  I've been exposed to many aspects of website development, such
-                  as:
-                </p>
-                <ul>
-                  <li>Consuming API</li>
-                  <li>Website accessibility, performance, and security</li>
-                  <li>TDD</li>
-                  <li>SEO</li>
-                </ul>
-                <p>The technologies that I've been working with recently:</p>
-                <ul>
-                  <li>JavaScript (ES6)</li>
-                  <li>Vue.js</li>
-                  <li>jQuery</li>
-                  <li>Wordpress</li>
-                  <li>Nuxt.js</li>
-                  <li>React.js</li>
-                </ul>
-                <p>
-                  Occasionally I took part in React.js project. It's on top of
-                  my things-to-learn list.
-                </p>
+                <div class="line-number">
+                  <div v-for="idx in 25" :key="idx">{{ idx }}</div>
+                </div>
+                <div class="text-window">
+                  <h2>Hi, my name is Helen Wijaya.</h2>
+                  <h3>I'm a frontend developer.</h3>
+                  <p>
+                    I'm <strong>passionate</strong> when it comes to
+                    <strong>making design alive</strong> through code.
+                  </p>
+                  <p>
+                    <strong>Four years experiences </strong> in a digital
+                    agency, I've been exposed to many aspects of website
+                    development, such as:
+                  </p>
+                  <ul>
+                    <li>Consuming API</li>
+                    <li>Website accessibility, performance, and security</li>
+                    <li>TDD</li>
+                    <li>SEO</li>
+                  </ul>
+                  <p>The technologies that I've been working with recently:</p>
+                  <ul>
+                    <li>JavaScript (ES6)</li>
+                    <li>Vue.js</li>
+                    <li>jQuery</li>
+                    <li>Wordpress</li>
+                    <li>Nuxt.js</li>
+                    <li>React.js</li>
+                  </ul>
+                  <p>
+                    Occasionally I took part in React.js project. It's on top of
+                    my things-to-learn list.
+                  </p>
+                </div>
               </div>
             </div>
           </div>
@@ -86,6 +98,17 @@
 <script>
 export default {
   name: 'About',
+  data() {
+    return {
+      index: 1,
+      isSidebarOpen: true,
+    }
+  },
+  methods: {
+    toggleSidebar() {
+      this.isSidebarOpen = !this.isSidebarOpen
+    },
+  },
 }
 </script>
 
@@ -100,13 +123,14 @@ section {
   position: relative;
   margin: auto;
 }
-.browser {
+.window {
   border: 3px solid $primary-red;
   border-radius: 7px;
   box-shadow: -8px 4px 0 rgba(0, 0, 0, 0.1);
   height: 100%;
   display: flex;
   flex-direction: column;
+  flex-grow: 1;
   width: 100%;
   animation: fade-in-bottom 1s ease-in-out both;
 
@@ -144,7 +168,7 @@ section {
   }
 
   .sidebar {
-    width: 115px;
+    width: 85px;
     background: $primary-red;
     height: 100%;
 
@@ -155,7 +179,7 @@ section {
       height: 3px;
       background: $primary-grey;
       border-radius: 10px;
-      width: 70%;
+      width: 65%;
       margin: 50px 0 0;
 
       &::before {
@@ -164,7 +188,7 @@ section {
         height: 20px;
         display: block;
         position: absolute;
-        left: -12px;
+        left: -8px;
         color: #f0f0f0;
         top: -20px;
         font-size: 20px;
@@ -174,17 +198,23 @@ section {
   }
 
   .content {
-    width: calc(100% - 150px);
     position: relative;
   }
 }
+.line-number {
+  color: $primary-red;
+}
 .text-wrapper {
-  padding: 10px 25px;
+  display: flex;
+  padding: 10px 25px 10px 10px;
   z-index: 1;
   position: relative;
   height: 100%;
   overflow-y: scroll;
   background: #0a0a0a;
+}
+.text-window {
+  padding-left: 10px;
 }
 section {
   position: relative;
@@ -228,6 +258,13 @@ h3 {
   box-shadow: 5px 5px 0 rgba(0, 0, 0, 0.1);
   text-align: center;
   font-size: 25px;
+
+  &.red {
+    color: $primary-red;
+  }
+  &.black {
+    color: black;
+  }
 }
 [class^='btn-'],
 .btn {
@@ -240,7 +277,7 @@ h3 {
 
 // responsive
 @media (max-width: $max-phone) {
-  .browser {
+  .window {
     .sidebar {
       display: none;
     }

@@ -2,7 +2,10 @@
   <!-- about me section -->
   <div class="inner-container">
     <client-only>
-      <TextDistortion text="Experience" :is-small="true" />
+      <div class="page-title">
+        <TextDistortion text="Experience" :is-small="true" />
+      </div>
+
       <template slot="placeholder">
         <div style="height: 52px" />
       </template>

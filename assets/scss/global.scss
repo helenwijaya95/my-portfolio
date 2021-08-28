@@ -42,14 +42,14 @@ body {
   overflow-x: hidden;
 }
 .container {
+  padding: 20px;
   margin: 0 auto;
-  min-height: calc(100vh - 40px);
+  min-height: calc(100vh - 117px);
   display: flex;
   justify-content: center;
   align-items: center;
   text-align: center;
   flex-direction: column;
-  padding: 40px 30px;
   max-width: 1100px;
   overflow: hidden;
 }
@@ -122,8 +122,8 @@ ul {
   font-size: 25px;
 }
 .inner-container {
-  padding: 40px 30px;
-  min-height: calc(100vh - 40px);
+  padding: 20px;
+  min-height: calc(100vh - 117px);
   overflow: hidden;
   max-width: 1100px;
   margin: 0 auto;
@@ -223,6 +223,11 @@ ul {
       }
     }
   }
+}
+
+.page-title {
+  margin-bottom: 30px;
+  text-align: center;
 }
 
 //keyframes

@@ -4,7 +4,7 @@
       <span data-splitting class="menu__item-title">{{ text }}</span>
     </div> -->
     <div class="distortion">
-      <a href="content-1" class="distortion-link">
+      <a class="distortion-link">
         <span
           data-splitting
           class="distortion-text"

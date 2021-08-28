@@ -4,10 +4,10 @@
       <falling-leaves />
       <cross-cursor />
     </client-only>
-    <Menu />
+    <Header />
     <Nuxt />
 
-    <footer>Copyright © 2021 by <strong>Helen Wijaya</strong></footer>
+    <footer>© 2021 <strong>Helen Wijaya.</strong> All Rights Reserved.</footer>
   </div>
 </template>
 
