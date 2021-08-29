@@ -38,6 +38,11 @@
               >Experience
             </NuxtLink>
           </li>
+          <li>
+            <NuxtLink to="/work" class="action-link" @click.native="toggleMenu"
+              >Work
+            </NuxtLink>
+          </li>
         </ul>
       </div>
     </transition>
