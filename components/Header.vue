@@ -2,7 +2,7 @@
   <header>
     <div class="logo">
       <NuxtLink to="/">
-        <img src="~static/img/Personal Logo_v3.png" />
+        <img width="120" height="30" src="~static/img/Personal Logo_v3.png" />
       </NuxtLink>
     </div>
     <div class="menu-btn-wrapper">

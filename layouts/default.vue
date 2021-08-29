@@ -61,7 +61,7 @@ html {
 
 footer {
   text-align: center;
-  font-size: 18px;
+  font-size: 20px;
   padding-bottom: 20px;
 }
 
