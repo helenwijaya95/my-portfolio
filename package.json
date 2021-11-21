@@ -27,7 +27,7 @@
     "bootstrap-vue": "^2.21.2",
     "core-js": "^3.9.1",
     "gsap": "3.6.1",
-    "nuxt": "^2.15.3",
+    "nuxt": "^2.15.8",
     "nuxt-fontawesome": "^0.4.0",
     "splitting": "1.0.6",
     "vue-class-component": "7.2.6"
