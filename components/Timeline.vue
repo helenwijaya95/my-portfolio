@@ -22,10 +22,16 @@ export default {
     return {
       experiences: [
         {
+          position: 'Frontend Developer',
+          company: 'Hogarth Worldwide',
+          companySite: 'https://www.hogarth.com/',
+          startYear: '2022-Present',
+        },
+        {
           position: 'Frontend Developer Associate Team Leader',
           company: 'Xtremax',
           companySite: 'https://www.xtremax.com/',
-          startYear: '2020-Present',
+          startYear: '2020-2021',
           jobdesc: [
             'Managed & led a team of 4',
             'Optimized website performance',
