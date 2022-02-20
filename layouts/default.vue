@@ -5,8 +5,7 @@
     </client-only>
     <Header />
     <Nuxt />
-
-    <footer>© 2021 <strong>Helen Wijaya.</strong> All Rights Reserved.</footer>
+    <Footer />
   </div>
 </template>
 
