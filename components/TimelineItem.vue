@@ -24,7 +24,10 @@
                 >
               </h2>
               <ul>
-                <li v-for="jobdesc in exp.jobdesc" :key="jobdesc">
+                <li
+                  v-for="jobdesc in exp.jobdesc"
+                  :key="`${jobdesc}-${exp.company}`"
+                >
                   {{ jobdesc }}
                 </li>
               </ul>
