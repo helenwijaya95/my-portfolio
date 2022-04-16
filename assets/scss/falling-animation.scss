@@ -1,0 +1,19 @@
+#falling-animation {
+  position: relative;
+  z-index: 3;
+
+  .fallen-obj {
+    width: 35px;
+    height: 35px;
+    position: absolute;
+  }
+
+  & > .fall {
+    background: url(~/static/img/leaf.png);    
+    background-size: 100% 100%;
+  }
+  & > .winter {
+    background: url(~/static/img/snowflakes.png);    
+    background-size: 100% 100%;
+  }
+}

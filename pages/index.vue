@@ -7,7 +7,7 @@
         <!-- <img src="~/static/img/marble.jpg" /> -->
         <!-- homepage -->
         <div class="container">
-          <!-- <falling-leaves /> -->
+          <!-- <falling-animation /> -->
           <cross-cursor />
 
           <text-distortion text="Hello,I'm Helen" />
