@@ -61,18 +61,52 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-.menu a.nuxt-link-exact-active {
-  @include styled-underline;
-  color: $base-font-color;
-}
 header {
   position: relative;
   z-index: 10;
   padding: 20px;
   width: 100%;
 }
+.fall-theme {
+  .menu a.nuxt-link-exact-active {
+    @include styled-underline($fall);
+  }
+
+  .active {
+    @include styled-underline($fall);
+  }
+}
+.summer-theme {
+  .menu a.nuxt-link-exact-active {
+    @include styled-underline($summer);
+  }
+
+  .active {
+    @include styled-underline($summer);
+  }
+}
+.spring-theme {
+  .menu a.nuxt-link-exact-active {
+    @include styled-underline($spring);
+  }
+
+  .active {
+    @include styled-underline($spring);
+  }
+}
+.winter-theme {
+  .menu a.nuxt-link-exact-active {
+    @include styled-underline($winter);
+  }
+
+  .active {
+    @include styled-underline($winter);
+  }
+}
+.menu a.nuxt-link-exact-active {
+  color: $base-font-color;
+}
 .active {
-  @include styled-underline;
   &::before {
     height: 20px;
     width: 22px;

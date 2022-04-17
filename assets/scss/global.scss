@@ -127,8 +127,35 @@ ul {
   text-decoration: none;
   margin-left: 20px;
 
-  // styled underline
-  @include styled-underline-on-hover;
+
+}
+
+.fall-theme {
+  .action-link {
+    // styled underline
+    @include styled-underline-on-hover($fall);
+  }
+}
+
+.summer-theme {
+  .action-link {
+    // styled underline
+    @include styled-underline-on-hover($summer);
+  }
+}
+
+.winter-theme {
+  .action-link {
+    // styled underline
+    @include styled-underline-on-hover($winter);
+  }
+}
+
+.spring-theme {
+  .action-link {
+    // styled underline
+    @include styled-underline-on-hover($spring);
+  }
 }
 
 /* transition */

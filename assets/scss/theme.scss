@@ -20,11 +20,23 @@
       background-image: url($fall);
     }
   }
+
+  .distortion-text {
+    .word-anim {
+      background-image: url($fall);
+    }
+  }
 }
 
 .winter-theme {
   #falling-animation {
     .fallen-obj {
+      background-image: url($winter);
+    }
+  }
+
+  .distortion-text {
+    .word-anim {
       background-image: url($winter);
     }
   }
@@ -36,11 +48,23 @@
       background-image: url($summer);
     }
   }
+
+  .distortion-text {
+    .word-anim {
+      background-image: url($summer);
+    }
+  }
 }
 
 .spring-theme {
   #falling-animation {
     .fallen-obj {
+      background-image: url($spring);
+    }
+  }
+
+  .distortion-text {
+    .word-anim {
       background-image: url($spring);
     }
   }

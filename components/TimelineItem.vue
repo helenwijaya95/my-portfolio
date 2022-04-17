@@ -4,7 +4,7 @@
       <div id="timeline">
         <div
           v-for="(exp, idx) in experiences"
-          :key="exp.position"
+          :key="`${idx}-${exp.position}`"
           class="timeline-item"
           :class="{ right: (idx + 1) % 2 === 0 }"
         >
