@@ -13,7 +13,7 @@
   }
 }
 
-
+// fall
 .fall-theme {
   #falling-animation {
     .fallen-obj {
@@ -26,8 +26,13 @@
       background-image: url($fall);
     }
   }
+
+  .branch {
+    background-image: url("~/static/img/Branch.png");
+  }
 }
 
+// winter
 .winter-theme {
   #falling-animation {
     .fallen-obj {
@@ -42,6 +47,7 @@
   }
 }
 
+// summer
 .summer-theme {
   #falling-animation {
     .fallen-obj {
@@ -56,6 +62,7 @@
   }
 }
 
+// spring
 .spring-theme {
   #falling-animation {
     .fallen-obj {

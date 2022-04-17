@@ -2,14 +2,14 @@
   <div>
     <TimelineItem :experiences="experiences" />
     <div class="bg-wrapper">
-      <div class="branch-1">
-        <img src="~static/img/Branch.png" />
+      <div class="branch top">
+        <!-- <img src="~static/img/Branch.png" /> -->
       </div>
-      <div class="branch-2">
-        <img src="~static/img/Branch.png" />
+      <div class="branch center">
+        <!-- <img src="~static/img/Branch.png" /> -->
       </div>
-      <div class="branch-3">
-        <img src="~static/img/Branch.png" />
+      <div class="branch bottom">
+        <!-- <img src="~static/img/Branch.png" /> -->
       </div>
     </div>
   </div>
@@ -82,42 +82,60 @@ export default {
   width: 100%;
   height: 100%;
 }
-[class^='branch-'] {
+.branch {
   position: absolute;
-  top: 0;
-  left: -30px;
   transform: rotate(-5deg) !important;
-  width: 727px;
   opacity: 0.2;
-  img {
-    transform: none !important;
-    width: 100%;
+  display: block;
+  background-repeat: no-repeat;
+
+  &.top {
+    background-size: 90% 90%;
+    background-position: 95px -5px;
+    width: 746px;
+    height: 314px;
+    top: 10vh;
+    left: -360px;
   }
-}
-.branch-1 {
-  top: 10vh;
-  left: -362px;
-}
-.branch-2 {
-  top: 60vh;
-  left: auto;
-  right: -159px;
-  width: 430px;
-  transform: rotate(-159deg) !important;
-}
-.branch-3 {
-  top: 79vh;
-  left: -369px;
-  width: 518px;
-  transform: rotate(3deg) !important;
+  &.center {
+    background-size: 100% 100%;
+    background-position: 10px -5px;
+    top: 60vh;
+    left: auto;
+    right: -159px;
+    width: 398px;
+    height: 175px;
+    transform: rotate(-159deg) !important;
+  }
+  &.bottom {
+    background-size: 90% 90%;
+    background-position: 35px -5px;
+    top: 79vh;
+    left: -369px;
+    width: 526px;
+    height: 211px;
+    transform: rotate(3deg) !important;
+  }
 }
 
 @media (max-width: $max-tablet) {
-  .branch-2 {
+  .branch.center {
     top: 79vh;
     left: auto;
     right: -400px;
     width: 100%;
+  }
+}
+
+@media (max-width: $max-phone) {
+  .branch.top {
+    background-position: -11px -5px;
+    background-size: 70% 70%;
+  }
+
+  .branch.bottom {
+    background-size: 70% 70%;
+    background-position: 58px -5px;
   }
 }
 </style>

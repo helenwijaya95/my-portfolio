@@ -251,3 +251,10 @@ a:focus-visible {
     }
   }
 }
+
+
+@media (max-width: $max-phone) {
+  .char {
+    font-size: 28px;
+  }
+}
