@@ -1,0 +1,32 @@
+$primary-red: #d03939;
+$primary-grey: #f0f0f0;
+
+// Theme
+$fall: '~/static/img/leaf.png';
+$winter: '~/static/img/snowflakes.png';
+$summer: '~/static/img/sunflower.png';
+$spring: '~/static/img/sakura.png';
+
+// Typography
+$base-font: 'Dosis',
+helvetica,
+arial,
+tahoma,
+verdana;
+$base-font-title: 'Press Start 2P',
+arial,
+tahoma,
+verdana;
+$base-font-size: 18px;
+$base-font-color: black;
+$color-link-hover: black;
+
+// cursor global var
+$cursor-stroke-width: 1px;
+$cursor-stroke: black;
+
+// responsive
+$max-phone: 576px;
+$max-tablet: 768px;
+$max-small-desktop: 992px;
+$max-large-desktop: 1200px;

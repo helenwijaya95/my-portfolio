@@ -9,6 +9,7 @@ $timeline-color: $primary-red;
 
 // Mixins and Placeholders
 %clearfix {
+
   &:after,
   &:before {
     content: '';
@@ -19,10 +20,15 @@ $timeline-color: $primary-red;
 }
 
 @mixin prefix($prop, $val) {
-  @each $prefix in '-webkit-', '-moz-', '-ms-', '' {
+
+  @each $prefix in '-webkit-',
+  '-moz-',
+  '-ms-',
+  '' {
     #{$prefix}#{$prop}: $val;
   }
 }
+
 *,
 *:before,
 *:after {
@@ -35,8 +41,8 @@ body,
 html {
   height: 100%;
 }
-body {
-}
+
+body {}
 
 img {
   max-width: 100%;
@@ -100,6 +106,7 @@ a {
       top: 0;
       left: calc(50% - 26px);
       width: 170px;
+
       span {
         font-size: 25px;
         color: $base-font-color;
@@ -159,16 +166,17 @@ a {
         border-left: 7px solid $timeline-color;
       }
 
-      &:hover {
-      }
+      &:hover {}
     }
 
     &.right {
       h2 {
         box-shadow: 8px 4px 0 rgba(0, 0, 0, 0.1);
       }
+
       .timeline-icon {
         left: calc(50% - 144px);
+
         span {
           right: auto;
           left: 2px;
@@ -182,6 +190,7 @@ a {
           bottom: -5px;
         }
       }
+
       .timeline-content {
         float: right;
 
@@ -196,18 +205,21 @@ a {
     }
   }
 }
+
 // responsive
 @media screen and (max-width: $max-tablet) {
   #timeline {
     ul {
       padding-left: 5px;
     }
+
     .timeline-item {
       &.right {
         .timeline-icon {
           left: calc(47% - 144px);
         }
       }
+
       .timeline-icon {
         left: calc(53% - 26px);
 
@@ -224,6 +236,7 @@ a {
     margin: 45px 30px;
     padding: 0px;
     width: 90%;
+
     &:before {
       left: 50px;
     }
@@ -245,6 +258,7 @@ a {
             left: auto;
             bottom: -5px;
           }
+
           span {
             text-align: left;
             color: $primary-grey;
@@ -266,12 +280,14 @@ a {
           }
         }
       }
+
       .timeline-content {
         width: 80%;
         margin-left: 50px;
         float: none;
         position: relative;
         margin-top: 15px;
+
         &:before {
           left: 20px;
           top: -7px;

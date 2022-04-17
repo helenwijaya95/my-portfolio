@@ -1,7 +1,7 @@
 <template>
   <div class="main-layout">
     <client-only>
-      <falling-animation />
+      <theme />
     </client-only>
     <Header />
     <Nuxt />

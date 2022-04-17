@@ -61,28 +61,16 @@ export default {
       }
 
       const tag = document.createElement('div')
-      tag.classList.add('leaf-bg', 'left')
+      tag.classList.add('word-anim', 'left')
       _el(1).appendChild(tag)
 
       const tag2 = document.createElement('div')
-      tag2.classList.add('leaf-bg', 'right')
+      tag2.classList.add('word-anim', 'right')
       _el(elNum - 1).appendChild(tag2)
 
       const tag3 = document.createElement('div')
-      tag3.classList.add('leaf-bg', 'center')
+      tag3.classList.add('word-anim', 'center')
       _el(Math.floor((elNum - 1) / 2)).appendChild(tag3)
-
-      // const tag2 = document.createElement('div')
-      // tag2.classList.add('leaf-bg', 'right')
-      // el2.appendChild(tag2)
-
-      // ;[...document.querySelectorAll('.menu__item .word .char')].forEach(
-      //   (el) => {
-      //     const tag = document.createElement('div')
-      //     tag.classList.add('leaf-bg')
-      //     el.appendChild(tag)
-      //   }
-      // )
     },
   },
 }

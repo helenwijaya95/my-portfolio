@@ -1,0 +1,47 @@
+#falling-animation {
+  position: relative;
+  z-index: 3;
+
+  .fallen-obj {
+    width: 35px;
+    height: 35px;
+    position: absolute;
+  }
+
+  &>.fallen-obj {
+    background-size: 100% 100%;
+  }
+}
+
+
+.fall-theme {
+  #falling-animation {
+    .fallen-obj {
+      background-image: url($fall);
+    }
+  }
+}
+
+.winter-theme {
+  #falling-animation {
+    .fallen-obj {
+      background-image: url($winter);
+    }
+  }
+}
+
+.summer-theme {
+  #falling-animation {
+    .fallen-obj {
+      background-image: url($summer);
+    }
+  }
+}
+
+.spring-theme {
+  #falling-animation {
+    .fallen-obj {
+      background-image: url($spring);
+    }
+  }
+}

@@ -1,5 +1,19 @@
 <template>
-  <div id="falling-animation"></div>
+  <div>
+    <select
+      id="theme-toggler"
+      v-model="selectedTheme"
+      name="theme"
+      @change="changeTheme"
+    >
+      <option v-for="theme in themeList" :key="theme.key" :value="theme.key">
+        {{ theme.value }}
+      </option>
+    </select>
+    <div>
+      <div id="falling-animation"></div>
+    </div>
+  </div>
 </template>
 
 <script>
@@ -9,18 +23,40 @@ a Pen by DIACO : twitter.com/Diaco_ml  ||  codepen.io/MAW
 powered by GSAP : https://www.greensock.com/
 */
 import gsap from 'gsap'
-
 import '../assets/scss/theme.scss'
+
 export default {
-  name: 'FallingAnimation',
+  name: 'Theme',
   data() {
     return {
       h: window.innerHeight,
       w: window.innerWidth,
+      selectedTheme: '',
+      themeList: [
+        {
+          key: 'spring',
+          value: 'Spring',
+        },
+        {
+          key: 'summer',
+          value: 'Summer',
+        },
+        {
+          key: 'fall',
+          value: 'Fall',
+        },
+        {
+          key: 'winter',
+          value: 'Winter',
+        },
+      ],
     }
   },
   mounted() {
     this.selectedTheme = 'fall'
+    document
+      .getElementsByClassName('main-layout')[0]
+      .classList.add(`${this.selectedTheme}-theme`)
     this.initAnimation()
   },
   methods: {
@@ -58,7 +94,6 @@ export default {
       gsap.set('#falling-animation', { perspective: 600 })
 
       const total = 7
-
       const _fallenObj = document.getElementsByClassName('fallen-obj')[0]
 
       // clear fallen object
@@ -70,7 +105,7 @@ export default {
       for (i = 0; i < total; i++) {
         const Div = document.createElement('div')
         gsap.set(Div, {
-          attr: { class: `${this.selectedTheme} fallen-obj` },
+          attr: { class: 'fallen-obj' },
           x: this.R(0, this.w),
           y: this.R(-200, -150),
           z: this.R(-200, 200),
@@ -79,28 +114,17 @@ export default {
         this.animate(Div)
       }
     },
+    changeTheme(val) {
+      this.selectedTheme = val.target.value
+      const classes = document
+        .getElementsByClassName('main-layout')[0]
+        .className.split(' ')
+        .filter((c) => !c.includes('-theme'))
+      classes.push(`${this.selectedTheme}-theme`)
+      document.getElementsByClassName('main-layout')[0].className =
+        classes.join(' ')
+      this.initAnimation()
+    },
   },
 }
 </script>
-
-<style scoped>
-/* body {
-  background-color: gray;
-  font-family: Signika Negative, Asap, sans-serif;
-  color: white;
-  overflow: hidden;
-}
-
-html,
-body,
-#falling-animation {
-  width: 100%;
-  height: 100%;
-}
-#logo {
-  left: 50%;
-  top: 50%;
-  position: absolute;
-  border-radius: 10px;
-} */
-</style>
