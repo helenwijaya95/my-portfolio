@@ -135,7 +135,7 @@ section {
   margin: auto;
 }
 .window {
-  border: 3px solid $primary-red;
+  border: 3px solid var(--primaryColor);
   border-radius: 7px;
   box-shadow: -8px 4px 0 rgba(0, 0, 0, 0.1);
   height: 100%;
@@ -146,7 +146,7 @@ section {
   animation: fade-in-bottom 1s ease-in-out both;
 
   .menu-bar {
-    border-bottom: 3px solid $primary-red;
+    border-bottom: 3px solid var(--primaryColor);
     position: relative;
     width: 100%;
     height: 45px;
@@ -174,13 +174,13 @@ section {
   .toolbar {
     width: 35px;
     height: 100%;
-    border-right: 1px solid $primary-red;
+    border-right: 1px solid var(--primaryColor);
     padding: 20px 3px;
   }
 
   .sidebar {
     width: 85px;
-    background: $primary-red;
+    background: var(--primaryColor);
     height: 100%;
 
     .line {
@@ -213,7 +213,7 @@ section {
   }
 }
 .line-number {
-  color: $primary-red;
+  color: var(--primaryColor);
 }
 .text-wrapper {
   display: flex;
@@ -256,7 +256,7 @@ h3 {
   width: 30px;
   height: 30px;
   border-radius: 50%;
-  background: $primary-red;
+  background: var(--primaryColor);
 
   box-shadow: 5px 5px 0 rgba(0, 0, 0, 0.1);
 }
@@ -271,7 +271,7 @@ h3 {
   font-size: 25px;
 
   &.red {
-    color: $primary-red;
+    color: var(--primaryColor);
   }
   &.black {
     color: black;

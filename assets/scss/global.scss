@@ -11,6 +11,26 @@
   box-sizing: border-box;
 }
 
+:root {
+  --primaryColor: #d03939;
+
+  .fall-theme {
+    --primaryColor: #d03939;
+  }
+
+  .winter-theme {
+    --primaryColor: #1897be;
+  }
+
+  .summer-theme {
+    --primaryColor: #f3640bed;
+  }
+
+  .spring-theme {
+    --primaryColor: #d160ab;
+  }
+}
+
 body {
   background-color: $primary-grey;
   background-size: cover;
@@ -66,7 +86,7 @@ p {
 
 a {
   text-decoration: underline;
-  color: $primary-red;
+  color: var(--primaryColor);
   outline: none;
 
   &:hover {
@@ -76,7 +96,7 @@ a {
 }
 
 strong {
-  color: $primary-red;
+  color: var(--primaryColor);
   font-weight: 600;
 }
 
@@ -92,7 +112,7 @@ ul {
 
     &::before {
       content: '\25AA';
-      color: $primary-red;
+      color: var(--primaryColor);
       font-weight: bold;
       display: inline-block;
       width: 1em;

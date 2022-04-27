@@ -9,7 +9,7 @@ export default class MenuItem {
     const bodyComputedStyle = getComputedStyle(document.body)
     this.colors = {
       initial: bodyComputedStyle.getPropertyValue('--color-menu'),
-      final: bodyComputedStyle.getPropertyValue('--color-link'),
+      final: bodyComputedStyle.getPropertyValue('--primaryColor'),
     }
     this.initEvents()
   }

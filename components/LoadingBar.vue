@@ -31,14 +31,14 @@ export default {
 .sp-loadbar {
   width: 50px;
   height: 18px;
-  border: 1px $primary-red solid;
+  border: 1px var(--primaryColor) solid;
   border-radius: 4px;
   background: linear-gradient(
     -60deg,
     transparent 0%,
     transparent 50%,
-    $primary-red 50%,
-    $primary-red 75%,
+    var(--primaryColor) 50%,
+    var(--primaryColor) 75%,
     transparent 75%,
     transparent
   );
