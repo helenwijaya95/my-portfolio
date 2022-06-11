@@ -45,6 +45,32 @@
       background-image: url($winter);
     }
   }
+
+  .branch {
+    background-image: url("~/static/img/snowy-branch.png");
+    background-size: 100% 100%;
+
+    &.top {
+      width: 700px;
+      height: 441px;
+      transform: rotate(-180deg);
+      left: 0;
+
+    }
+
+    &.center {
+      width: 400px;
+      height: 252px;
+      transform: rotate(0);
+    }
+
+    &.bottom {
+      width: 300px;
+      height: 189px;
+      transform: rotate(-203deg);
+      left: -90px;
+    }
+  }
 }
 
 // summer
@@ -60,6 +86,37 @@
       background-image: url($summer);
     }
   }
+
+  .branch {
+    background-image: url("~/static/img/sunflower-silhoutte.png");
+    opacity: 0.1;
+
+
+    &.bottom,
+    &.center {
+      top: auto;
+      bottom: -67px;
+      left: 20px;
+      transform: rotate(0);
+      width: 400px;
+      height: 333px;
+      background-position: 0%;
+    }
+
+    &.center {
+      left: auto;
+      right: 20vh;
+      bottom: -20px;
+      background-image: url("~/static/img/sunflower-silhoutte_2.png");
+
+      width: 276px;
+      height: 282px;
+    }
+
+    &.top {
+      display: none;
+    }
+  }
 }
 
 // spring
@@ -73,6 +130,32 @@
   .distortion-text {
     .word-anim {
       background-image: url($spring);
+    }
+  }
+
+  .branch {
+    transform: rotate(-180deg);
+    background-image: url("~/static/img/spring-branch.png");
+
+    &.top {
+      width: 500px;
+      height: 500px;
+      left: 0;
+    }
+
+    &.center {
+      width: 250px;
+      height: 250px;
+      right: 0;
+      transform: rotate(0);
+    }
+
+    &.bottom {
+      width: 300px;
+      height: 300px;
+      left: -97px;
+      transform: rotate(-193deg);
+      top: 73vh;
     }
   }
 }

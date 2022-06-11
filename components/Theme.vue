@@ -54,7 +54,7 @@ export default {
     }
   },
   mounted() {
-    this.selectedTheme = 'fall'
+    this.selectedTheme = 'winter'
     document
       .getElementsByClassName('main-layout')[0]
       .classList.add(`${this.selectedTheme}-theme`)

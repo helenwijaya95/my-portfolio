@@ -84,7 +84,7 @@ export default {
 }
 .branch {
   position: absolute;
-  transform: rotate(-5deg) !important;
+  transform: rotate(-5deg);
   opacity: 0.2;
   display: block;
   background-repeat: no-repeat;
@@ -105,7 +105,7 @@ export default {
     right: -159px;
     width: 398px;
     height: 175px;
-    transform: rotate(-159deg) !important;
+    transform: rotate(-159deg);
   }
   &.bottom {
     background-size: 90% 90%;
@@ -114,7 +114,7 @@ export default {
     left: -369px;
     width: 526px;
     height: 211px;
-    transform: rotate(3deg) !important;
+    transform: rotate(3deg);
   }
 }
 
