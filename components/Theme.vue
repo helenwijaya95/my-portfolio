@@ -1,6 +1,6 @@
 <template>
   <div>
-    <select
+    <!-- <select
       id="theme-toggler"
       v-model="selectedTheme"
       name="theme"
@@ -10,7 +10,12 @@
       <option v-for="theme in themeList" :key="theme.key" :value="theme.key">
         {{ theme.value }}
       </option>
-    </select>
+    </select> -->
+    <theme-switcher
+      :theme-list="themeList"
+      :selected-theme="selectedTheme"
+      :change-theme="changeTheme"
+    ></theme-switcher>
     <div>
       <div id="falling-animation"></div>
     </div>
@@ -116,7 +121,7 @@ export default {
       }
     },
     changeTheme(val) {
-      this.selectedTheme = val.target.value
+      this.selectedTheme = val
       const classes = document
         .getElementsByClassName('main-layout')[0]
         .className.split(' ')
