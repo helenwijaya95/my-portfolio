@@ -13,6 +13,53 @@
   }
 }
 
+.bg-wrapper {
+  position: fixed;
+  top: 0;
+  left: 0;
+  content: '';
+  width: 100%;
+  height: 100%;
+}
+
+.branch {
+  position: absolute;
+  transform: rotate(-5deg);
+  opacity: 0.2;
+  display: block;
+  background-repeat: no-repeat;
+
+  &.top {
+    background-size: 90% 90%;
+    background-position: 95px -5px;
+    width: 746px;
+    height: 314px;
+    top: 10vh;
+    left: -360px;
+  }
+
+  &.center {
+    background-size: 100% 100%;
+    background-position: 10px -5px;
+    top: 60vh;
+    left: auto;
+    right: -159px;
+    width: 398px;
+    height: 175px;
+    transform: rotate(-159deg);
+  }
+
+  &.bottom {
+    background-size: 90% 90%;
+    background-position: 35px -5px;
+    top: 79vh;
+    left: -369px;
+    width: 526px;
+    height: 211px;
+    transform: rotate(3deg);
+  }
+}
+
 // fall
 .fall-theme {
   #falling-animation {
@@ -156,6 +203,71 @@
       left: -97px;
       transform: rotate(-193deg);
       top: 73vh;
+    }
+  }
+}
+
+// responsive
+
+@media (max-width: $max-tablet) {
+  .branch.center {
+    top: 79vh;
+    left: auto;
+    right: -400px;
+    width: 100%;
+  }
+
+  .summer-theme {
+    .branch.center {
+      right: 0;
+    }
+  }
+}
+
+@media only screen and (max-width: $max-phone) {
+  .branch.top {
+    background-position: -11px -5px;
+    background-size: 70% 70%;
+  }
+
+  .branch.bottom {
+    background-size: 70% 70%;
+    background-position: 58px -5px;
+  }
+
+  .spring-theme {
+    .branch {
+      &.top {
+        left: -300px;
+      }
+
+      &.bottom {
+        display: none;
+      }
+    }
+  }
+
+  .summer-theme {
+    .branch {
+      &.center {
+        right: 0;
+        background-position: 89% 100%;
+        background-size: 55% 55%;
+      }
+
+      &.bottom {
+        background-position-y: 67%;
+        background-size: 45% 45%;
+
+      }
+    }
+  }
+
+  .winter-theme {
+    .branch {
+      &.top {
+        background-position: 117% 50px;
+      }
     }
   }
 }
