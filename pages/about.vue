@@ -128,7 +128,7 @@ section {
   height: calc(100vh - 190px);
 }
 .background {
-  max-width: 800px;
+  max-width: 700px;
   height: 100%;
   display: block;
   position: relative;

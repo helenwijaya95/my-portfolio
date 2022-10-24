@@ -40,12 +40,12 @@ export default {
       selectedTheme: '',
       themeList: [
         {
-          key: 'spring',
-          value: 'Spring',
-        },
-        {
           key: 'summer',
           value: 'Summer',
+        },
+        {
+          key: 'spring',
+          value: 'Spring',
         },
         {
           key: 'fall',
