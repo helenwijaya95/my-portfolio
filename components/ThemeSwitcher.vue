@@ -10,8 +10,20 @@
         @click="changeTheme(theme.key, $event)"
       >
         <span class="text"> {{ theme.value }}</span>
+        <div class="short-line-1"></div>
+        <div class="short-line-2"></div>
+        <div class="short-line-3"></div>
       </li>
     </ul>
+    <div class="thermometer">
+      <div class="inner">
+        <div class="inner-line"></div>
+      </div>
+      <div class="outer">
+        <div class="outer-line"></div>
+      </div>
+    </div>
+
     <div class="temp-indicator"><div class="line"></div></div>
   </div>
 </template>
@@ -70,13 +82,61 @@ export default {
 <style lang="scss" scoped>
 .theme-switcher {
   position: fixed;
-  bottom: 25px;
+  bottom: 35px;
   z-index: 3;
   width: 105px;
   height: 250px;
   right: 15px;
 }
 
+.thermometer {
+  position: absolute;
+  bottom: 0;
+}
+.inner {
+  width: 33px;
+  height: 33px;
+  background-color: white;
+  display: block;
+  position: absolute;
+  bottom: -19px;
+  border-radius: 50%;
+  left: 11px;
+  z-index: 2;
+
+  .inner-line {
+    display: block;
+    left: 10px;
+    height: 220px;
+    width: 14px;
+    background-color: white;
+    position: absolute;
+    bottom: 28px;
+    border-radius: 5px;
+  }
+}
+.outer {
+  width: 45px;
+  height: 45px;
+  background-color: #c4c3c3;
+  display: block;
+  position: absolute;
+  bottom: -25px;
+  border-radius: 50%;
+  left: 5px;
+  z-index: 1;
+
+  .outer-line {
+    display: block;
+    left: 10px;
+    height: 225px;
+    width: 25px;
+    background-color: #c4c3c3;
+    position: absolute;
+    bottom: 28px;
+    border-radius: 5px;
+  }
+}
 .temp-indicator {
   display: block;
   width: 20px;
@@ -86,11 +146,12 @@ export default {
   background-color: $primary-red;
   border-radius: 50%;
   left: 17px;
+  z-index: 3;
 
   .line {
     display: block;
     bottom: 20px;
-    left: 8px;
+    left: 9px;
     position: absolute;
     width: 3px;
     height: 20px;
@@ -103,9 +164,11 @@ export default {
   position: relative;
   cursor: pointer;
   color: $primary-red;
+  z-index: 3;
 
   .text {
     font-size: 18px;
+    padding-left: 7px;
     transition: font-weight 0.2s cubic-bezier(0.075, 0.82, 0.165, 1);
   }
 
@@ -120,8 +183,8 @@ export default {
     top: 50%;
     transform: translateY(-50%);
     opacity: 0;
-    transition: 0.3s opacity ease-in;
-    left: -1px;
+    transition: 0.15s opacity ease-in;
+    left: 1px;
   }
 
   &::after {
@@ -131,8 +194,8 @@ export default {
     background-color: $primary-red;
     display: block;
     position: absolute;
-    top: 50%;
-    left: -13px;
+    top: 18%;
+    left: -12px;
     transform: translate(-50%);
     opacity: 0.2;
   }
@@ -144,6 +207,28 @@ export default {
     .text {
       font-weight: bold;
     }
+  }
+
+  div[class*='short-line'] {
+    position: absolute;
+    width: 4px;
+    height: 1px;
+    background-color: $primary-red;
+    left: -10px;
+    display: block;
+    z-index: 3;
+  }
+
+  div.short-line-1 {
+    bottom: calc(30% - 22px);
+  }
+  div.short-line-2 {
+    bottom: calc(60% - 22px);
+  }
+  div.short-line-3 {
+    bottom: calc(90% - 22px);
+    width: 10px;
+    left: -17px;
   }
 }
 </style>
