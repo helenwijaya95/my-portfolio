@@ -11,10 +11,16 @@
         {{ theme.value }}
       </option>
     </select> -->
+    <mobile-toggle
+      :toggle-theme="toggleThemeSwitcher"
+      :show-theme="showTheme"
+    />
     <theme-switcher
       :theme-list="themeList"
       :selected-theme="selectedTheme"
       :change-theme="changeTheme"
+      :show="showTheme"
+      :toggle-theme="toggleThemeSwitcher"
     ></theme-switcher>
     <div>
       <div id="falling-animation"></div>
@@ -56,6 +62,7 @@ export default {
           value: 'Winter',
         },
       ],
+      showTheme: true,
     }
   },
   mounted() {
@@ -130,6 +137,9 @@ export default {
       document.getElementsByClassName('main-layout')[0].className =
         classes.join(' ')
       this.initAnimation()
+    },
+    toggleThemeSwitcher() {
+      this.showTheme = !this.showTheme
     },
   },
 }

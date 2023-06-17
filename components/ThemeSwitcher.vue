@@ -1,34 +1,62 @@
 <template>
-  <div class="theme-switcher">
-    <ul class="theme-list">
-      <li
-        v-for="theme in themeList"
-        :key="theme.key"
-        :data-value="theme.key"
-        class="theme-item"
-        :class="selectedTheme == theme.key ? 'active' : ''"
-        @click="changeTheme(theme.key, $event)"
-      >
-        <span class="text"> {{ theme.value }}</span>
-        <div class="short-line-1"></div>
-        <div class="short-line-2"></div>
-        <div class="short-line-3"></div>
-      </li>
-    </ul>
-    <div class="thermometer">
-      <div class="inner">
-        <div class="inner-line"></div>
+  <transition name="fade" mode="out-in">
+    <div v-if="show" class="theme-switcher">
+      <ul class="theme-list">
+        <li
+          v-for="theme in themeList"
+          :key="theme.key"
+          :data-value="theme.key"
+          class="theme-item"
+          :class="selectedTheme == theme.key ? 'active' : ''"
+          @click="changeTheme(theme.key, $event)"
+        >
+          <span class="text"> {{ theme.value }}</span>
+          <div class="short-line-1"></div>
+          <div class="short-line-2"></div>
+          <div class="short-line-3"></div>
+        </li>
+      </ul>
+      <div class="thermometer">
+        <div class="inner">
+          <div class="inner-line"></div>
+        </div>
+        <div class="outer">
+          <div class="outer-line"></div>
+        </div>
       </div>
-      <div class="outer">
-        <div class="outer-line"></div>
-      </div>
-    </div>
 
-    <div class="temp-indicator"><div class="line"></div></div>
-  </div>
+      <div class="temp-indicator">
+        <div class="line"></div>
+      </div></div
+  ></transition>
 </template>
 
 <script>
+import Vue from 'vue'
+Vue.directive('click-outside', {
+  bind(el, binding, vnode) {
+    const mobileToggle = document.getElementsByClassName('mobile-toggle')
+    el.clickOutsideEvent = function (event) {
+      // here I check that click was outside the el and his children
+      console.log(el)
+      console.log(event.target)
+      if (
+        !(
+          el == event.target ||
+          el.contains(event.target) ||
+          el == mobileToggle[0]
+        )
+      ) {
+        // and if it did, call method provided in attribute value
+        vnode.context[binding.expression](event)
+      }
+    }
+    document.body.addEventListener('click', el.clickOutsideEvent)
+  },
+  unbind(el) {
+    document.body.removeEventListener('click', el.clickOutsideEvent)
+  },
+})
 export default {
   props: {
     selectedTheme: {
@@ -43,6 +71,14 @@ export default {
       type: Function,
       default: () => {},
     },
+    show: {
+      type: Boolean,
+      default: true,
+    },
+    toggleTheme: {
+      type: Function,
+      default: () => {},
+    },
   },
   watch: {
     selectedTheme() {
@@ -53,6 +89,9 @@ export default {
     this.setTheme()
   },
   methods: {
+    test() {
+      this.toggleTheme()
+    },
     nodeIndex(_el) {
       let i = 0
       while (_el.previousElementSibling) {
@@ -71,9 +110,11 @@ export default {
       if (_active) {
         idx = this.nodeIndex(_active)
       }
-      const height = _themeList.offsetHeight
-      const indicatorHeight = height - (idx / 4) * height - 10
-      _indicatorLine.style.height = indicatorHeight + 'px'
+      if (_themeList) {
+        const height = _themeList.offsetHeight
+        const indicatorHeight = height - (idx / 4) * height - 10
+        _indicatorLine.style.height = indicatorHeight + 'px'
+      }
     },
   },
 }
@@ -87,6 +128,18 @@ export default {
   width: 105px;
   height: 250px;
   right: 15px;
+  &::before {
+    position: absolute;
+    left: 0;
+    top: 0;
+    display: block;
+    content: '';
+    width: 120px;
+    height: 290px;
+    background-color: rgba(231, 231, 231, 0.83);
+    border-radius: 15px;
+    box-shadow: -11px 8px 3px 3px #8888887d;
+  }
 }
 
 .thermometer {

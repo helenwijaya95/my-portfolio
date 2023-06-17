@@ -30,7 +30,8 @@
     "nuxt": "^2.15.3",
     "nuxt-fontawesome": "^0.4.0",
     "splitting": "1.0.6",
-    "vue-class-component": "7.2.6"
+    "vue-class-component": "7.2.6",
+    "vue-mq": "1.0.1"
   },
   "devDependencies": {
     "@nuxt/types": "^2.15.3",

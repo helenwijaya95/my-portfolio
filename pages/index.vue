@@ -24,9 +24,9 @@
 
 <script lang="ts">
 import Vue from 'vue'
+import VueMq from 'vue-mq'
 import CrossCursor from '../components/CrossCursor.vue'
 import LoadingBar from '~/components/LoadingBar.vue'
-
 export default Vue.extend({
   components: {
     LoadingBar,
@@ -36,6 +36,15 @@ export default Vue.extend({
         return import('../components/TextDistortion.vue')
       }
     },
+  },
+})
+
+Vue.use(VueMq, {
+  breakpoints: {
+    // default breakpoints - customize this
+    sm: 450,
+    md: 1250,
+    lg: Infinity,
   },
 })
 </script>
