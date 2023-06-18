@@ -259,3 +259,26 @@ ul {
     transform: rotate(-35deg);
   }
 }
+
+@keyframes MoveArrow {
+
+  0% {
+    bottom: 25px;
+  }
+
+  50% {
+    bottom: 26px;
+  }
+
+  50% {
+    bottom: 25.5px;
+  }
+
+  75% {
+    bottom: 25px;
+  }
+
+  100% {
+    bottom: 25px;
+  }
+}

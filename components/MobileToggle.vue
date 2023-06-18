@@ -1,7 +1,8 @@
 <template>
   <mq-layout mq="sm">
     <div class="mobile-toggle" @click="toggleTheme">
-      <div>customize <br />theme</div>
+      <div v-if="!showTheme">customize <br />theme</div>
+      <div v-else class="close">close</div>
       <div class="triangle triangle-top-left"></div>
     </div>
   </mq-layout>
@@ -46,10 +47,17 @@ export default {
     bottom: 26px;
     right: 30px;
     transform: rotate(225deg);
+    animation: MoveArrow 0.5s cubic-bezier(0.6, -0.28, 0.735, 0.045) infinite;
+    animation-delay: 1s;
     &.triangle-top-left {
       border-top: 15px solid $primary-red;
       border-right: 15px solid transparent;
     }
+  }
+
+  .close {
+    padding-top: 8px;
+    color: $base-font-color;
   }
 }
 </style>
