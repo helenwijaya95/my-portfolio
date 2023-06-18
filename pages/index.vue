@@ -42,8 +42,8 @@ export default Vue.extend({
 Vue.use(VueMq, {
   breakpoints: {
     // default breakpoints - customize this
-    sm: 450,
-    md: 1250,
+    sm: 375,
+    md: 1035,
     lg: Infinity,
   },
 })

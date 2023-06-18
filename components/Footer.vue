@@ -1,6 +1,8 @@
 <template>
   <footer>
-    © {{ year }} <strong>Helen Wijaya.</strong> All Rights Reserved.
+    <p>
+      © {{ year }} <strong>Helen Wijaya.</strong> <br />All Rights Reserved.
+    </p>
   </footer>
 </template>
 
@@ -18,3 +20,13 @@ export default {
   },
 }
 </script>
+
+<style lang="scss" scoped>
+footer {
+  padding-bottom: 0;
+  padding-bottom: 0;
+  margin-bottom: 0;
+  position: relative;
+  bottom: 10px;
+}
+</style>

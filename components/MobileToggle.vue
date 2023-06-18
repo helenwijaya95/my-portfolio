@@ -1,11 +1,9 @@
 <template>
-  <mq-layout mq="sm">
-    <div class="mobile-toggle" @click="toggleTheme">
-      <div v-if="!showTheme">customize <br />theme</div>
-      <div v-else class="close">close</div>
-      <div class="triangle triangle-top-left"></div>
-    </div>
-  </mq-layout>
+  <div class="mobile-toggle" @click="toggleTheme">
+    <div v-if="!showTheme">customize <br />theme</div>
+    <div v-else class="close">close</div>
+    <div class="triangle triangle-top-left"></div>
+  </div>
 </template>
 
 <script>

@@ -11,10 +11,14 @@
         {{ theme.value }}
       </option>
     </select> -->
-    <mobile-toggle
-      :toggle-theme="toggleThemeSwitcher"
-      :show-theme="showTheme"
-    />
+    <client-only>
+      <mq-layout mq="sm">
+        <mobile-toggle
+          :toggle-theme="toggleThemeSwitcher"
+          :show-theme="showTheme"
+        />
+      </mq-layout>
+    </client-only>
     <theme-switcher
       :theme-list="themeList"
       :selected-theme="selectedTheme"

@@ -51,7 +51,7 @@
             <div class="content">
               <div class="text-wrapper">
                 <div class="line-number">
-                  <div v-for="idx in 25" :key="idx">{{ idx }}</div>
+                  <div v-for="idx in lineNum" :key="idx">{{ idx }}</div>
                 </div>
                 <div class="text-window">
                   <h2>Hi, my name is Helen Wijaya.</h2>
@@ -113,7 +113,11 @@ export default {
     return {
       index: 1,
       isSidebarOpen: true,
+      lineNum: 25,
     }
+  },
+  mounted() {
+    this.lineNum = this.$mq === 'sm' ? 35 : this.$mq === 'md' ? 30 : 25
   },
   methods: {
     toggleSidebar() {
@@ -125,7 +129,7 @@ export default {
 
 <style lang="scss" scoped>
 section {
-  height: calc(100vh - 190px);
+  height: calc(100vh - 245px);
 }
 .background {
   max-width: 700px;
@@ -226,6 +230,7 @@ section {
 }
 .text-window {
   padding-left: 10px;
+  width: 100%;
 }
 section {
   position: relative;
