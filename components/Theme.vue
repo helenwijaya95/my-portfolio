@@ -1,7 +1,7 @@
 <template>
   <div>
     <client-only>
-      <mq-layout mq="sm">
+      <mq-layout :mq="['md', 'sm']">
         <mobile-toggle
           :toggle-theme="toggleThemeSwitcher"
           :show-theme="showTheme"
@@ -29,6 +29,8 @@ powered by GSAP : https://www.greensock.com/
 */
 import gsap from 'gsap'
 import '../assets/scss/theme.scss'
+import Vue from 'vue'
+import VueMq from 'vue-mq'
 
 export default {
   name: 'Theme',
@@ -59,7 +61,7 @@ export default {
     }
   },
   mounted() {
-    this.selectedTheme = 'winter'
+    this.selectedTheme = 'fall'
     document
       .getElementsByClassName('main-layout')[0]
       .classList.add(`${this.selectedTheme}-theme`)
@@ -136,4 +138,13 @@ export default {
     },
   },
 }
+
+Vue.use(VueMq, {
+  breakpoints: {
+    // default breakpoints - customize this
+    sm: 780,
+    md: 1035,
+    lg: Infinity,
+  },
+})
 </script>
