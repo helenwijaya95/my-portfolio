@@ -55,35 +55,28 @@
                 </div>
                 <div class="text-window">
                   <h2>Hi, my name is Helen Wijaya.</h2>
-                  <h3>I'm a frontend developer.</h3>
                   <p>
                     I'm <strong>passionate</strong> when it comes to
-                    <strong>making design alive</strong> through code.
+                    <strong>solving problems</strong> through coding.
                   </p>
                   <p>
-                    <strong>Four years experiences </strong> in a digital
-                    agency, I've been exposed to many aspects of website
-                    development, such as:
+                    <strong>Six years of experiences</strong>, I've been exposed
+                    to many aspects of website development, such as:
                   </p>
                   <ul>
-                    <li>Consuming API</li>
+                    <li>Consuming and creating REST API</li>
                     <li>Website accessibility, performance, and security</li>
                     <li>TDD</li>
                     <li>SEO</li>
                   </ul>
-                  <p>The technologies that I've been working with recently:</p>
+                  <p>The technologies that I've been exploring in recently:</p>
                   <ul>
                     <li>JavaScript (ES6)</li>
                     <li>Vue.js</li>
-                    <li>jQuery</li>
-                    <li>Wordpress</li>
-                    <li>Nuxt.js</li>
+                    <li>Next.js</li>
                     <li>React.js</li>
+                    <li>Node.js</li>
                   </ul>
-                  <p>
-                    Occasionally I took part in React.js project. It's on top of
-                    my things-to-learn list.
-                  </p>
                 </div>
               </div>
             </div>

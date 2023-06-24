@@ -1,16 +1,5 @@
 <template>
   <div>
-    <!-- <select
-      id="theme-toggler"
-      v-model="selectedTheme"
-      name="theme"
-      style="z-index: 6; position: relative"
-      @change="changeTheme"
-    >
-      <option v-for="theme in themeList" :key="theme.key" :value="theme.key">
-        {{ theme.value }}
-      </option>
-    </select> -->
     <client-only>
       <mq-layout mq="sm">
         <mobile-toggle
