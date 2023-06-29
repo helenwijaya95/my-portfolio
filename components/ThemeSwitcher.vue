@@ -38,8 +38,6 @@ Vue.directive('click-outside', {
     const mobileToggle = document.getElementsByClassName('mobile-toggle')
     el.clickOutsideEvent = function (event) {
       // here I check that click was outside the el and his children
-      console.log(el)
-      console.log(event.target)
       if (
         !(
           el == event.target ||
