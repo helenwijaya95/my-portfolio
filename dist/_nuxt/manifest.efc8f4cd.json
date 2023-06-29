@@ -1,7 +1,6 @@
 {
   "name": "personal-portfolio",
   "short_name": "personal-portfolio",
-  "description": "## Build Setup",
   "icons": [
     {
       "src": "/_nuxt/icons/icon_64x64.5f6a36.png",
