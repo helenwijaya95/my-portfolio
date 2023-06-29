@@ -61,6 +61,7 @@ export default {
     }
   },
   mounted() {
+    this.showTheme = this.$mq === 'lg'
     this.selectedTheme = 'fall'
     document
       .getElementsByClassName('main-layout')[0]
