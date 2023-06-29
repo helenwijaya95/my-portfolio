@@ -60,9 +60,12 @@ export default {
       showTheme: true,
     }
   },
-  mounted() {
+  beforeMount() {
     this.showTheme = this.$mq === 'lg'
+  },
+  mounted() {
     this.selectedTheme = 'fall'
+
     document
       .getElementsByClassName('main-layout')[0]
       .classList.add(`${this.selectedTheme}-theme`)
