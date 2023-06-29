@@ -69,7 +69,7 @@
                     <li>TDD</li>
                     <li>SEO</li>
                   </ul>
-                  <p>The technologies that I've been exploring in recently:</p>
+                  <p>The technologies that I've been exploring recently:</p>
                   <ul>
                     <li>JavaScript (ES6)</li>
                     <li>Vue.js</li>
